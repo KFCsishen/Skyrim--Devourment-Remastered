@@ -1,0 +1,3 @@
+This makes the #2 devourment footstep silent. Use this if you are hearing the same footstep slosh sfx playing repeatedly.
+
+Merge with data folder.

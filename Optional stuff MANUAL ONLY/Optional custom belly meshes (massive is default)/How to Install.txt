@@ -1,9 +1,0 @@
-Select 1 of the 4 meshes you want to use.
-
-Size ranges from Original, Larger, Massive (recommended) and Gigantic.
-
-Drag the "Meshes" folder of the belly you want to use into your Data folder.
-
-Start Skyrim and enjoy.
-
-If you want to revert back to the older belly mesh, use the mesh titled, "Original".
