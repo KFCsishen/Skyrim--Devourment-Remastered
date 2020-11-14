@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorhpsDraugrf1">
+        <DataFolder>1CreatureMorhpsDraugrf1</DataFolder>
+        <SourceFile>1CreatureMorhpsDraugrf1.nif</SourceFile>
+        <OutputPath>meshes\actors\draugr\character assets</OutputPath>
+        <OutputFile GenWeights="false">draugrfemale</OutputFile>
+        <Shape target="FemaleBodyNaked60">FemaleBodyNaked60</Shape>
+        <Shape target="Rags61">Rags61</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="FemaleBodyNaked60Vore prey belly" target="FemaleBodyNaked60" local="true">1CreatureMorhpsDraugrf1.osd\FemaleBodyNaked60Vore prey belly</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

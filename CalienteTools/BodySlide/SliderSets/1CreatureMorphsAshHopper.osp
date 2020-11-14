@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsAshHopper">
+        <DataFolder>1CreatureMorphsAshHopper</DataFolder>
+        <SourceFile>1CreatureMorphsAshHopper.nif</SourceFile>
+        <OutputPath>Meshes\actors\dlc02\scrib\character assets</OutputPath>
+        <OutputFile GenWeights="false">scrib</OutputFile>
+        <Shape target="Scrib">Scrib</Shape>
+        <Shape target="mouth">mouth</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="ScribVore prey belly" target="Scrib" local="true">1CreatureMorphsAshHopper.osd\ScribVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="ScribStruggleSlider1" target="Scrib" local="true">1CreatureMorphsAshHopper.osd\ScribStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="ScribStruggleSlider2" target="Scrib" local="true">1CreatureMorphsAshHopper.osd\ScribStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="ScribStruggleSlider3" target="Scrib" local="true">1CreatureMorphsAshHopper.osd\ScribStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

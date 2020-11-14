@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsGiant1">
+        <DataFolder>1CreatureMorphsGiant1</DataFolder>
+        <SourceFile>1CreatureMorphsGiant1.nif</SourceFile>
+        <OutputPath>meshes\actors\giant\character assets</OutputPath>
+        <OutputFile GenWeights="false">giant</OutputFile>
+        <Shape target="giant_base:0">giant_base:0</Shape>
+        <Shape target="giant_base:1">giant_base:1</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="giant_base:0Vore prey belly" target="giant_base:0" local="true">1CreatureMorphsGiant1.osd\giant_base:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="giant_base:0StruggleSlider1" target="giant_base:0" local="true">1CreatureMorphsGiant1.osd\giant_base:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="giant_base:0StruggleSlider2" target="giant_base:0" local="true">1CreatureMorphsGiant1.osd\giant_base:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="giant_base:0StruggleSlider3" target="giant_base:0" local="true">1CreatureMorphsGiant1.osd\giant_base:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsSabreSnow">
+        <DataFolder>1CreatureMorphsSabreSnow</DataFolder>
+        <SourceFile>1CreatureMorphsSabreSnow.nif</SourceFile>
+        <OutputPath>meshes\actors\sabrecat\character assets</OutputPath>
+        <OutputFile GenWeights="false">sabrecatsnow</OutputFile>
+        <Shape target="SabreCat_LeftEye">SabreCat_LeftEye</Shape>
+        <Shape target="SabreCat_RightEye">SabreCat_RightEye</Shape>
+        <Shape target="SabreCat_outfit">SabreCat_outfit</Shape>
+        <Shape target="SabrecatMane">SabrecatMane</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="SabreCat_outfitVore prey belly" target="SabreCat_outfit" local="true">1CreatureMorphsSabreSnow.osd\SabreCat_outfitVore prey belly</Data>
+            <Data name="SabrecatManeVore prey belly" target="SabrecatMane" local="true">1CreatureMorphsSabreSnow.osd\SabrecatManeVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="SabreCat_outfitStruggleSlider1" target="SabreCat_outfit" local="true">1CreatureMorphsSabreSnow.osd\SabreCat_outfitStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="SabreCat_outfitStruggleSlider2" target="SabreCat_outfit" local="true">1CreatureMorphsSabreSnow.osd\SabreCat_outfitStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="SabreCat_outfitStruggleSlider3" target="SabreCat_outfit" local="true">1CreatureMorphsSabreSnow.osd\SabreCat_outfitStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsElk">
+        <DataFolder>1CreatureMorphsElk</DataFolder>
+        <SourceFile>1CreatureMorphsElk.nif</SourceFile>
+        <OutputPath>meshes\actors\deer\character assets</OutputPath>
+        <OutputFile GenWeights="false">elk_maleskin</OutputFile>
+        <Shape target="DeerBase02:0">DeerBase02:0</Shape>
+        <Shape target="DeerBase02:1">DeerBase02:1</Shape>
+        <Shape target="ElkMaleLEye01">ElkMaleLEye01</Shape>
+        <Shape target="ElkMaleREye">ElkMaleREye</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="DeerBase02:0Vore prey belly" target="DeerBase02:0" local="true">1CreatureMorphsElk.osd\DeerBase02:0Vore prey belly</Data>
+            <Data name="DeerBase02:1Vore prey belly" target="DeerBase02:1" local="true">1CreatureMorphsElk.osd\DeerBase02:1Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="DeerBase02:0StruggleSlider1" target="DeerBase02:0" local="true">1CreatureMorphsElk.osd\DeerBase02:0StruggleSlider1</Data>
+            <Data name="DeerBase02:1StruggleSlider1" target="DeerBase02:1" local="true">1CreatureMorphsElk.osd\DeerBase02:1StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="DeerBase02:0StruggleSlider2" target="DeerBase02:0" local="true">1CreatureMorphsElk.osd\DeerBase02:0StruggleSlider2</Data>
+            <Data name="DeerBase02:1StruggleSlider2" target="DeerBase02:1" local="true">1CreatureMorphsElk.osd\DeerBase02:1StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="DeerBase02:0StruggleSlider3" target="DeerBase02:0" local="true">1CreatureMorphsElk.osd\DeerBase02:0StruggleSlider3</Data>
+            <Data name="DeerBase02:1StruggleSlider3" target="DeerBase02:1" local="true">1CreatureMorphsElk.osd\DeerBase02:1StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

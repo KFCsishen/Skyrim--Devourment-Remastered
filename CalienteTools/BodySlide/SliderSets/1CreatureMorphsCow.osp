@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsCow">
+        <DataFolder>1CreatureMorphsCow</DataFolder>
+        <SourceFile>1CreatureMorphsCow.nif</SourceFile>
+        <OutputPath>meshes\actors\cow\character assets</OutputPath>
+        <OutputFile GenWeights="false">highlandcow</OutputFile>
+        <Shape target="Fur">Fur</Shape>
+        <Shape target="highlandcow">highlandcow</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="highlandcowVore prey belly" target="highlandcow" local="true">1CreatureMorphsCow.osd\highlandcowVore prey belly</Data>
+            <Data name="FurVore prey belly" target="Fur" local="true">1CreatureMorphsCow.osd\FurVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="highlandcowStruggleSlider1" target="highlandcow" local="true">1CreatureMorphsCow.osd\highlandcowStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="highlandcowStruggleSlider2" target="highlandcow" local="true">1CreatureMorphsCow.osd\highlandcowStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="highlandcowStruggleSlider3" target="highlandcow" local="true">1CreatureMorphsCow.osd\highlandcowStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

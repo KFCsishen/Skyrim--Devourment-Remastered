@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsChaurus">
+        <DataFolder>1CreatureMorphsChaurus</DataFolder>
+        <SourceFile>1CreatureMorphsChaurus.nif</SourceFile>
+        <OutputPath>meshes\actors\chaurus\character assets</OutputPath>
+        <OutputFile GenWeights="false">chauurusskin</OutputFile>
+        <Shape target="New">New</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="NewVore prey belly" target="New" local="true">1CreatureMorphsChaurus.osd\NewVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="NewStruggleSlider1" target="New" local="true">1CreatureMorphsChaurus.osd\NewStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="NewStruggleSlider2" target="New" local="true">1CreatureMorphsChaurus.osd\NewStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="NewStruggleSlider3" target="New" local="true">1CreatureMorphsChaurus.osd\NewStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

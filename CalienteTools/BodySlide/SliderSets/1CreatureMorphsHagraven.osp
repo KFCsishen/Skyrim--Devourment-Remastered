@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsHagraven">
+        <DataFolder>1CreatureMorphsHagraven</DataFolder>
+        <SourceFile>1CreatureMorphsHagraven.nif</SourceFile>
+        <OutputPath>Meshes\actors\hagraven\character assets</OutputPath>
+        <OutputFile GenWeights="false">hagraven</OutputFile>
+        <Shape target="Hagraven_GEO">Hagraven_GEO</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Hagraven_GEOVore prey belly" target="Hagraven_GEO" local="true">1CreatureMorphsHagraven.osd\Hagraven_GEOVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="Hagraven_GEOStruggleSlider1" target="Hagraven_GEO" local="true">1CreatureMorphsHagraven.osd\Hagraven_GEOStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="Hagraven_GEOStruggleSlider2" target="Hagraven_GEO" local="true">1CreatureMorphsHagraven.osd\Hagraven_GEOStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="Hagraven_GEOStruggleSlider3" target="Hagraven_GEO" local="true">1CreatureMorphsHagraven.osd\Hagraven_GEOStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

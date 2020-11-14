@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsDragonOdahviing">
+        <DataFolder>1CreatureMorphsOdahviing</DataFolder>
+        <SourceFile>1CreatureMorphsOdahviing.nif</SourceFile>
+        <OutputPath>Meshes\actors\dragon</OutputPath>
+        <OutputFile GenWeights="false">dragonohdaviing</OutputFile>
+        <Shape target="Odahviing:0">Odahviing:0</Shape>
+        <Shape target="Odahviing:1">Odahviing:1</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Odahviing:0Vore prey belly" target="Odahviing:0" local="true">1CreatureMorphsOdahviing.osd\Odahviing:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="Odahviing:0StruggleSlider1" target="Odahviing:0" local="true">1CreatureMorphsOdahviing.osd\Odahviing:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="Odahviing:0StruggleSlider2" target="Odahviing:0" local="true">1CreatureMorphsOdahviing.osd\Odahviing:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="Odahviing:0StruggleSlider3" target="Odahviing:0" local="true">1CreatureMorphsOdahviing.osd\Odahviing:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

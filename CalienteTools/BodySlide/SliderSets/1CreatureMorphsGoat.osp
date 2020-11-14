@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsGoat">
+        <DataFolder>1CreatureMorphsGoat</DataFolder>
+        <SourceFile>1CreatureMorphsGoat.nif</SourceFile>
+        <OutputPath>meshes\actors\goat\character assets</OutputPath>
+        <OutputFile GenWeights="false">goat</OutputFile>
+        <Shape target="Goat">Goat</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="GoatVore prey belly" target="Goat" local="true">1CreatureMorphsGoat.osd\GoatVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="GoatStruggleSlider1" target="Goat" local="true">1CreatureMorphsGoat.osd\GoatStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="GoatStruggleSlider2" target="Goat" local="true">1CreatureMorphsGoat.osd\GoatStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="GoatStruggleSlider3" target="Goat" local="true">1CreatureMorphsGoat.osd\GoatStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

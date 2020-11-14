@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsDragon">
+        <DataFolder>1CreatureMorphsDragon</DataFolder>
+        <SourceFile>1CreatureMorphsDragon.nif</SourceFile>
+        <OutputPath>Meshes\actors\dragon\character assets</OutputPath>
+        <OutputFile GenWeights="false">dragon</OutputFile>
+        <Shape target="Dragon:0">Dragon:0</Shape>
+        <Shape target="Dragon:1">Dragon:1</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Dragon:0Vore prey belly" target="Dragon:0" local="true">1CreatureMorphsDragon.osd\Dragon:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="Dragon:0StruggleSlider1" target="Dragon:0" local="true">1CreatureMorphsDragon.osd\Dragon:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="Dragon:0StruggleSlider2" target="Dragon:0" local="true">1CreatureMorphsDragon.osd\Dragon:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="Dragon:0StruggleSlider3" target="Dragon:0" local="true">1CreatureMorphsDragon.osd\Dragon:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

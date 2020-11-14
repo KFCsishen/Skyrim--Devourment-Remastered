@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorhpsDraugrF2">
+        <DataFolder>1CreatureMorhpsDraugrF2</DataFolder>
+        <SourceFile>1CreatureMorhpsDraugrF2.nif</SourceFile>
+        <OutputPath>meshes\actors\draugr\character assets</OutputPath>
+        <OutputFile GenWeights="false">draugrmagicfemale01</OutputFile>
+        <Shape target="FemaleBodyNakedReduced:0">FemaleBodyNakedReduced:0</Shape>
+        <Shape target="FemaleBodyNakedReduced:1">FemaleBodyNakedReduced:1</Shape>
+        <Shape target="HairFemaleReduced">HairFemaleReduced</Shape>
+        <Shape target="WholeSkeletonReduced">WholeSkeletonReduced</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="WholeSkeletonReducedVore prey belly" target="WholeSkeletonReduced" local="true">1CreatureMorhpsDraugrF2.osd\WholeSkeletonReducedVore prey belly</Data>
+            <Data name="FemaleBodyNakedReduced:0Vore prey belly" target="FemaleBodyNakedReduced:0" local="true">1CreatureMorhpsDraugrF2.osd\FemaleBodyNakedReduced:0Vore prey belly</Data>
+            <Data name="FemaleBodyNakedReduced:1Vore prey belly" target="FemaleBodyNakedReduced:1" local="true">1CreatureMorhpsDraugrF2.osd\FemaleBodyNakedReduced:1Vore prey belly</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

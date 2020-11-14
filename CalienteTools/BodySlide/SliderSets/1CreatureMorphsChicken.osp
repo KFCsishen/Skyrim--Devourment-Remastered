@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsChicken">
+        <DataFolder>1CreatureMorphsChicken</DataFolder>
+        <SourceFile>1CreatureMorphsChicken.nif</SourceFile>
+        <OutputPath>meshes\actors\ambient\chicken\character assets</OutputPath>
+        <OutputFile GenWeights="false">chicken</OutputFile>
+        <Shape target="chicken">chicken</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="chickenVore prey belly" target="chicken" local="true">1CreatureMorphsChicken.osd\chickenVore prey belly</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

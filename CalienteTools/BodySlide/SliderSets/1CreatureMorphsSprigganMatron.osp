@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsSprigganMatron">
+        <DataFolder>1CreatureMorphsSprigganMatron</DataFolder>
+        <SourceFile>1CreatureMorphsSprigganMatron.nif</SourceFile>
+        <OutputPath>meshes\actors\spriggan\character assets</OutputPath>
+        <OutputFile GenWeights="false">sprigganmatron</OutputFile>
+        <Shape target="HandCovers">HandCovers</Shape>
+        <Shape target="SprigganMatron:0">SprigganMatron:0</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="SprigganMatron:0Vore prey belly" target="SprigganMatron:0" local="true">1CreatureMorphsSprigganMatron.osd\SprigganMatron:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="SprigganMatron:0StruggleSlider1" target="SprigganMatron:0" local="true">1CreatureMorphsSprigganMatron.osd\SprigganMatron:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="SprigganMatron:0StruggleSlider2" target="SprigganMatron:0" local="true">1CreatureMorphsSprigganMatron.osd\SprigganMatron:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="SprigganMatron:0StruggleSlider3" target="SprigganMatron:0" local="true">1CreatureMorphsSprigganMatron.osd\SprigganMatron:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

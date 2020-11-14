@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsElkFemale">
+        <DataFolder>1CreatureMorphsElkFemale</DataFolder>
+        <SourceFile>1CreatureMorphsElkFemale.nif</SourceFile>
+        <OutputPath>meshes\actors\deer\character assets</OutputPath>
+        <OutputFile GenWeights="false">elk_femaleskin</OutputFile>
+        <Shape target="DeerBase01:0">DeerBase01:0</Shape>
+        <Shape target="ElkFemalLEye01">ElkFemalLEye01</Shape>
+        <Shape target="ElkFemalREye">ElkFemalREye</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="DeerBase01:0Vore prey belly" target="DeerBase01:0" local="true">1CreatureMorphsElkFemale.osd\DeerBase01:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="DeerBase01:0StruggleSlider1" target="DeerBase01:0" local="true">1CreatureMorphsElkFemale.osd\DeerBase01:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="DeerBase01:0StruggleSlider2" target="DeerBase01:0" local="true">1CreatureMorphsElkFemale.osd\DeerBase01:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="DeerBase01:0StruggleSlider3" target="DeerBase01:0" local="true">1CreatureMorphsElkFemale.osd\DeerBase01:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

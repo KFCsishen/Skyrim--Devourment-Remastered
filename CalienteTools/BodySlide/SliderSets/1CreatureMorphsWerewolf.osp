@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsWerewolf">
+        <DataFolder>1CreatureMorphsWerewolf</DataFolder>
+        <SourceFile>1CreatureMorphsWerewolf.nif</SourceFile>
+        <OutputPath>Meshes\actors\werewolfbeast\character assets</OutputPath>
+        <OutputFile GenWeights="true">malebodywerewolf</OutputFile>
+        <Shape target="EyesMaleWerewolfBeast">EyesMaleWerewolfBeast</Shape>
+        <Shape target="WereWolfLow01:0">WereWolfLow01:0</Shape>
+        <Shape target="WereWolfLow01:1">WereWolfLow01:1</Shape>
+        <Shape target="WereWolfLowHead01">WereWolfLowHead01</Shape>
+        <Shape target="WereWolfTeeth">WereWolfTeeth</Shape>
+        <Slider name="Vore prey belly" invert="false" small="0" big="0">
+            <Data name="WereWolfLow01:0Vore prey belly" target="WereWolfLow01:0" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:0Vore prey belly</Data>
+            <Data name="WereWolfLow01:1Vore prey belly" target="WereWolfLow01:1" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:1Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" small="0" big="0">
+            <Data name="WereWolfLow01:0StruggleSlider1" target="WereWolfLow01:0" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" small="0" big="0">
+            <Data name="WereWolfLow01:0StruggleSlider2" target="WereWolfLow01:0" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:0StruggleSlider2</Data>
+            <Data name="WereWolfLow01:1StruggleSlider2" target="WereWolfLow01:1" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:1StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" small="0" big="0">
+            <Data name="WereWolfLow01:0StruggleSlider3" target="WereWolfLow01:0" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:0StruggleSlider3</Data>
+            <Data name="WereWolfLow01:1StruggleSlider3" target="WereWolfLow01:1" local="true">1CreatureMorphsWerewolf.osd\WereWolfLow01:1StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

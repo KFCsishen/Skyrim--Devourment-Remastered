@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsWolfBlack">
+        <DataFolder>1CreatureMorphsWolfBlack</DataFolder>
+        <SourceFile>1CreatureMorphsWolfBlack.nif</SourceFile>
+        <OutputPath>meshes\actors\canine\character assets wolf</OutputPath>
+        <OutputFile GenWeights="false">wolfBlack</OutputFile>
+        <Shape target="Fur" DataFolder="1CreatureMorphsWolf">Fur</Shape>
+        <Shape target="Wolf">Wolf</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="WolfVore prey belly" target="Wolf" local="true">1CreatureMorphsWolfBlack.osd\WolfVore prey belly</Data>
+            <Data name="FurVore prey belly" target="Fur" local="true">1CreatureMorphsWolfBlack.osd\FurVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="WolfStruggleSlider1" target="Wolf" local="true">1CreatureMorphsWolfBlack.osd\WolfStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="WolfStruggleSlider2" target="Wolf" local="true">1CreatureMorphsWolfBlack.osd\WolfStruggleSlider2</Data>
+            <Data name="FurStruggleSlider2" target="Fur"></Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="WolfStruggleSlider3" target="Wolf" local="true">1CreatureMorphsWolfBlack.osd\WolfStruggleSlider3</Data>
+            <Data name="FurStruggleSlider3" target="Fur"></Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

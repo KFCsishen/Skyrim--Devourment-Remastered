@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsDeer">
+        <DataFolder>1CreatureMorphsDeer</DataFolder>
+        <SourceFile>1CreatureMorphsDeer.nif</SourceFile>
+        <OutputPath>meshes\actors\deer\character assets</OutputPath>
+        <OutputFile GenWeights="false">reindeer_skin</OutputFile>
+        <Shape target="ElkMaleLEye03">ElkMaleLEye03</Shape>
+        <Shape target="ReinDeer:0">ReinDeer:0</Shape>
+        <Shape target="ReinDeer:1">ReinDeer:1</Shape>
+        <Shape target="ReinDeerEye">ReinDeerEye</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="ReinDeer:0Vore prey belly" target="ReinDeer:0" local="true">1CreatureMorphsDeer.osd\ReinDeer:0Vore prey belly</Data>
+            <Data name="ReinDeer:1Vore prey belly" target="ReinDeer:1" local="true">1CreatureMorphsDeer.osd\ReinDeer:1Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="ReinDeer:0StruggleSlider1" target="ReinDeer:0" local="true">1CreatureMorphsDeer.osd\ReinDeer:0StruggleSlider1</Data>
+            <Data name="ReinDeer:1StruggleSlider1" target="ReinDeer:1" local="true">1CreatureMorphsDeer.osd\ReinDeer:1StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="ReinDeer:0StruggleSlider2" target="ReinDeer:0" local="true">1CreatureMorphsDeer.osd\ReinDeer:0StruggleSlider2</Data>
+            <Data name="ReinDeer:1StruggleSlider2" target="ReinDeer:1" local="true">1CreatureMorphsDeer.osd\ReinDeer:1StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="ReinDeer:0StruggleSlider3" target="ReinDeer:0" local="true">1CreatureMorphsDeer.osd\ReinDeer:0StruggleSlider3</Data>
+            <Data name="ReinDeer:1StruggleSlider3" target="ReinDeer:1" local="true">1CreatureMorphsDeer.osd\ReinDeer:1StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

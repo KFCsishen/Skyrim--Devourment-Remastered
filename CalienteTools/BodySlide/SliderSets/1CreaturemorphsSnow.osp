@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsDragonSnow">
+        <DataFolder>1CreaturemorphsSnow</DataFolder>
+        <SourceFile>1CreaturemorphsSnow.nif</SourceFile>
+        <OutputPath>Meshes\actors\dragon</OutputPath>
+        <OutputFile GenWeights="false">dragonsnow</OutputFile>
+        <Shape target="Ice Dragon">Ice Dragon</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Ice DragonVore prey belly" target="Ice Dragon" local="true">1CreaturemorphsSnow.osd\Ice DragonVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="Ice DragonStruggleSlider1" target="Ice Dragon" local="true">1CreaturemorphsSnow.osd\Ice DragonStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="Ice DragonStruggleSlider2" target="Ice Dragon" local="true">1CreaturemorphsSnow.osd\Ice DragonStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="Ice DragonStruggleSlider3" target="Ice Dragon" local="true">1CreaturemorphsSnow.osd\Ice DragonStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

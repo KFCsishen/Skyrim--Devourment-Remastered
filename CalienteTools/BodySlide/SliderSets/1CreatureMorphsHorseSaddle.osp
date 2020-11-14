@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsHorseSaddle">
+        <DataFolder>1CreatureMorphsHorseSaddle</DataFolder>
+        <SourceFile>1CreatureMorphsHorseSaddle.nif</SourceFile>
+        <OutputPath>meshes\actors\horse\character assets</OutputPath>
+        <OutputFile GenWeights="false">saddle</OutputFile>
+        <Shape target="NordicBridle">NordicBridle</Shape>
+        <Shape target="NordicSaddle">NordicSaddle</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="NordicSaddleVore prey belly" target="NordicSaddle" local="true">1CreatureMorphsHorseSaddle.osd\NordicSaddleVore prey belly</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

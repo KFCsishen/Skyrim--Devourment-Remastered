@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1MaleBody">
+        <DataFolder>1MaleBody</DataFolder>
+        <SourceFile>1MaleBody.nif</SourceFile>
+        <OutputPath>meshes\Actors\Character\Character Assets\</OutputPath>
+        <OutputFile GenWeights="true">malebody</OutputFile>
+        <Shape target="Body" DataFolder="1MaleBody">Body</Shape>
+        <Shape target="Underwear">Underwear</Shape>
+        <Slider name="NeckSeam" invert="false" small="0" big="100" hidden="true">
+            <Data name="BodyNeckSeam" target="Body" local="true">1MaleBody.osd\BodyNeckSeam</Data>
+        </Slider>
+        <Slider name="AnkleSeam" invert="false" small="0" big="0">
+            <Data name="BodyAnkleSeam" target="Body" local="true">1MaleBody.osd\BodyAnkleSeam</Data>
+        </Slider>
+        <Slider name="WristSeam" invert="false" small="0" big="0">
+            <Data name="BodyWristSeam" target="Body" local="true">1MaleBody.osd\BodyWristSeam</Data>
+        </Slider>
+        <Slider name="GenitalsSeam" invert="false" small="0" big="100" hidden="true">
+            <Data name="BodyGenitalsSeam" target="Body" local="true">1MaleBody.osd\BodyGenitalsSeam</Data>
+            <Data name="UnderwearGenitalsSeam" target="Underwear" local="true">1MaleBody.osd\UnderwearGenitalsSeam</Data>
+        </Slider>
+        <Slider name="SAM High" invert="false" small="0" big="0">
+            <Data name="BodySAM High" target="Body" local="true">1MaleBody.osd\BodySAM High</Data>
+            <Data name="UnderwearSAM High" target="Underwear" local="true">1MaleBody.osd\UnderwearSAM High</Data>
+        </Slider>
+        <Slider name="AppleCheeks" invert="false" small="0" big="0">
+            <Data name="BodyAppleCheeks" target="Body" local="true">1MaleBody.osd\BodyAppleCheeks</Data>
+            <Data name="UnderwearAppleCheeks" target="Underwear" local="true">1MaleBody.osd\UnderwearAppleCheeks</Data>
+        </Slider>
+        <Slider name="Arms" invert="false" small="0" big="0">
+            <Data name="BodyArms" target="Body" local="true">1MaleBody.osd\BodyArms</Data>
+        </Slider>
+        <Slider name="Back" invert="false" small="0" big="0">
+            <Data name="BodyBack" target="Body" local="true">1MaleBody.osd\BodyBack</Data>
+            <Data name="UnderwearBack" target="Underwear" local="true">1MaleBody.osd\UnderwearBack</Data>
+        </Slider>
+        <Slider name="BackArch" invert="false" small="0" big="0">
+            <Data name="BodyBackArch" target="Body" local="true">1MaleBody.osd\BodyBackArch</Data>
+            <Data name="UnderwearBackArch" target="Underwear" local="true">1MaleBody.osd\UnderwearBackArch</Data>
+        </Slider>
+        <Slider name="Belly" invert="false" small="0" big="0">
+            <Data name="BodyBelly" target="Body" local="true">1MaleBody.osd\BodyBelly</Data>
+            <Data name="UnderwearBelly" target="Underwear" local="true">1MaleBody.osd\UnderwearBelly</Data>
+        </Slider>
+        <Slider name="BigBelly" invert="false" small="0" big="0">
+            <Data name="BodyBigBelly" target="Body" local="true">1MaleBody.osd\BodyBigBelly</Data>
+            <Data name="UnderwearBigBelly" target="Underwear" local="true">1MaleBody.osd\UnderwearBigBelly</Data>
+        </Slider>
+        <Slider name="BigButt" invert="false" small="0" big="0">
+            <Data name="BodyBigButt" target="Body" local="true">1MaleBody.osd\BodyBigButt</Data>
+            <Data name="UnderwearBigButt" target="Underwear" local="true">1MaleBody.osd\UnderwearBigButt</Data>
+        </Slider>
+        <Slider name="BigTorso" invert="false" small="0" big="0">
+            <Data name="BodyBigTorso" target="Body" local="true">1MaleBody.osd\BodyBigTorso</Data>
+            <Data name="UnderwearBigTorso" target="Underwear" local="true">1MaleBody.osd\UnderwearBigTorso</Data>
+        </Slider>
+        <Slider name="BreastCenter" invert="false" small="0" big="0">
+            <Data name="BodyBreastCenter" target="Body" local="true">1MaleBody.osd\BodyBreastCenter</Data>
+        </Slider>
+        <Slider name="BreastCenterBig" invert="false" small="0" big="0">
+            <Data name="BodyBreastCenterBig" target="Body" local="true">1MaleBody.osd\BodyBreastCenterBig</Data>
+        </Slider>
+        <Slider name="BreastCleavage" invert="false" small="0" big="0">
+            <Data name="BodyBreastCleavage" target="Body" local="true">1MaleBody.osd\BodyBreastCleavage</Data>
+            <Data name="UnderwearBreastCleavage" target="Underwear" local="true">1MaleBody.osd\UnderwearBreastCleavage</Data>
+        </Slider>
+        <Slider name="BreastGravity2" invert="false" small="0" big="0">
+            <Data name="BodyBreastGravity2" target="Body" local="true">1MaleBody.osd\BodyBreastGravity2</Data>
+        </Slider>
+        <Slider name="BreastHeight" invert="false" small="0" big="0">
+            <Data name="BodyBreastHeight" target="Body" local="true">1MaleBody.osd\BodyBreastHeight</Data>
+        </Slider>
+        <Slider name="BreastPerkiness" invert="false" small="0" big="0">
+            <Data name="BodyBreastPerkiness" target="Body" local="true">1MaleBody.osd\BodyBreastPerkiness</Data>
+        </Slider>
+        <Slider name="BreastsTogether" invert="false" small="0" big="0">
+            <Data name="BodyBreastsTogether" target="Body" local="true">1MaleBody.osd\BodyBreastsTogether</Data>
+        </Slider>
+        <Slider name="BreastTopSlope" invert="false" small="0" big="0">
+            <Data name="BodyBreastTopSlope" target="Body" local="true">1MaleBody.osd\BodyBreastTopSlope</Data>
+        </Slider>
+        <Slider name="BreastWidth" invert="false" small="0" big="0">
+            <Data name="BodyBreastWidth" target="Body" local="true">1MaleBody.osd\BodyBreastWidth</Data>
+        </Slider>
+        <Slider name="Butt" invert="false" small="0" big="0">
+            <Data name="BodyButt" target="Body" local="true">1MaleBody.osd\BodyButt</Data>
+            <Data name="UnderwearButt" target="Underwear" local="true">1MaleBody.osd\UnderwearButt</Data>
+        </Slider>
+        <Slider name="ButtClassic" invert="false" small="0" big="0">
+            <Data name="BodyButtClassic" target="Body" local="true">1MaleBody.osd\BodyButtClassic</Data>
+            <Data name="UnderwearButtClassic" target="Underwear" local="true">1MaleBody.osd\UnderwearButtClassic</Data>
+        </Slider>
+        <Slider name="ButtCrack" invert="false" small="0" big="0">
+            <Data name="BodyButtCrack" target="Body" local="true">1MaleBody.osd\BodyButtCrack</Data>
+            <Data name="UnderwearButtCrack" target="Underwear" local="true">1MaleBody.osd\UnderwearButtCrack</Data>
+        </Slider>
+        <Slider name="ButtShape2" invert="false" small="0" big="0">
+            <Data name="BodyButtShape2" target="Body" local="true">1MaleBody.osd\BodyButtShape2</Data>
+            <Data name="UnderwearButtShape2" target="Underwear" local="true">1MaleBody.osd\UnderwearButtShape2</Data>
+        </Slider>
+        <Slider name="ButtSmall" invert="false" small="0" big="0">
+            <Data name="BodyButtSmall" target="Body" local="true">1MaleBody.osd\BodyButtSmall</Data>
+            <Data name="UnderwearButtSmall" target="Underwear" local="true">1MaleBody.osd\UnderwearButtSmall</Data>
+        </Slider>
+        <Slider name="CalfSize" invert="false" small="0" big="0">
+            <Data name="BodyCalfSize" target="Body" local="true">1MaleBody.osd\BodyCalfSize</Data>
+        </Slider>
+        <Slider name="CalfSmooth" invert="false" small="0" big="0">
+            <Data name="BodyCalfSmooth" target="Body" local="true">1MaleBody.osd\BodyCalfSmooth</Data>
+        </Slider>
+        <Slider name="ChestDepth" invert="false" small="0" big="0">
+            <Data name="BodyChestDepth" target="Body" local="true">1MaleBody.osd\BodyChestDepth</Data>
+            <Data name="UnderwearChestDepth" target="Underwear" local="true">1MaleBody.osd\UnderwearChestDepth</Data>
+        </Slider>
+        <Slider name="ChestWidth" invert="false" small="0" big="0">
+            <Data name="BodyChestWidth" target="Body" local="true">1MaleBody.osd\BodyChestWidth</Data>
+            <Data name="UnderwearChestWidth" target="Underwear" local="true">1MaleBody.osd\UnderwearChestWidth</Data>
+        </Slider>
+        <Slider name="ChubbyArms" invert="false" small="0" big="0">
+            <Data name="BodyChubbyArms" target="Body" local="true">1MaleBody.osd\BodyChubbyArms</Data>
+        </Slider>
+        <Slider name="ChubbyButt" invert="false" small="0" big="0">
+            <Data name="BodyChubbyButt" target="Body" local="true">1MaleBody.osd\BodyChubbyButt</Data>
+            <Data name="UnderwearChubbyButt" target="Underwear" local="true">1MaleBody.osd\UnderwearChubbyButt</Data>
+        </Slider>
+        <Slider name="ChubbyLegs" invert="false" small="0" big="0">
+            <Data name="BodyChubbyLegs" target="Body" local="true">1MaleBody.osd\BodyChubbyLegs</Data>
+            <Data name="UnderwearChubbyLegs" target="Underwear" local="true">1MaleBody.osd\UnderwearChubbyLegs</Data>
+        </Slider>
+        <Slider name="ChubbyWaist" invert="false" small="0" big="0">
+            <Data name="BodyChubbyWaist" target="Body" local="true">1MaleBody.osd\BodyChubbyWaist</Data>
+            <Data name="UnderwearChubbyWaist" target="Underwear" local="true">1MaleBody.osd\UnderwearChubbyWaist</Data>
+        </Slider>
+        <Slider name="ForearmSize" invert="false" small="0" big="0">
+            <Data name="BodyForearmSize" target="Body" local="true">1MaleBody.osd\BodyForearmSize</Data>
+        </Slider>
+        <Slider name="HipBone" invert="false" small="0" big="0">
+            <Data name="BodyHipBone" target="Body" local="true">1MaleBody.osd\BodyHipBone</Data>
+            <Data name="UnderwearHipBone" target="Underwear" local="true">1MaleBody.osd\UnderwearHipBone</Data>
+        </Slider>
+        <Slider name="Hips" invert="false" small="0" big="0">
+            <Data name="BodyHips" target="Body" local="true">1MaleBody.osd\BodyHips</Data>
+            <Data name="UnderwearHips" target="Underwear" local="true">1MaleBody.osd\UnderwearHips</Data>
+        </Slider>
+        <Slider name="HipUpperWidth" invert="false" small="0" big="0">
+            <Data name="BodyHipUpperWidth" target="Body" local="true">1MaleBody.osd\BodyHipUpperWidth</Data>
+            <Data name="UnderwearHipUpperWidth" target="Underwear" local="true">1MaleBody.osd\UnderwearHipUpperWidth</Data>
+        </Slider>
+        <Slider name="KneeHeight" invert="false" small="0" big="0">
+            <Data name="BodyKneeHeight" target="Body" local="true">1MaleBody.osd\BodyKneeHeight</Data>
+        </Slider>
+        <Slider name="KneeShape" invert="false" small="0" big="0">
+            <Data name="BodyKneeShape" target="Body" local="true">1MaleBody.osd\BodyKneeShape</Data>
+        </Slider>
+        <Slider name="LegsThin" invert="false" small="0" big="0">
+            <Data name="BodyLegsThin" target="Body" local="true">1MaleBody.osd\BodyLegsThin</Data>
+            <Data name="UnderwearLegsThin" target="Underwear" local="true">1MaleBody.osd\UnderwearLegsThin</Data>
+        </Slider>
+        <Slider name="MuscleAbs" invert="false" small="0" big="0">
+            <Data name="BodyMuscleAbs" target="Body" local="true">1MaleBody.osd\BodyMuscleAbs</Data>
+            <Data name="UnderwearMuscleAbs" target="Underwear" local="true">1MaleBody.osd\UnderwearMuscleAbs</Data>
+        </Slider>
+        <Slider name="MuscleArms" invert="false" small="0" big="0">
+            <Data name="BodyMuscleArms" target="Body" local="true">1MaleBody.osd\BodyMuscleArms</Data>
+        </Slider>
+        <Slider name="MuscleButt" invert="false" small="0" big="0">
+            <Data name="BodyMuscleButt" target="Body" local="true">1MaleBody.osd\BodyMuscleButt</Data>
+            <Data name="UnderwearMuscleButt" target="Underwear" local="true">1MaleBody.osd\UnderwearMuscleButt</Data>
+        </Slider>
+        <Slider name="MuscleLegs" invert="false" small="0" big="0">
+            <Data name="BodyMuscleLegs" target="Body" local="true">1MaleBody.osd\BodyMuscleLegs</Data>
+            <Data name="UnderwearMuscleLegs" target="Underwear" local="true">1MaleBody.osd\UnderwearMuscleLegs</Data>
+        </Slider>
+        <Slider name="MusclePecs" invert="false" small="0" big="0">
+            <Data name="BodyMusclePecs" target="Body" local="true">1MaleBody.osd\BodyMusclePecs</Data>
+        </Slider>
+        <Slider name="NippleDistance" invert="false" small="0" big="0">
+            <Data name="BodyNippleDistance" target="Body" local="true">1MaleBody.osd\BodyNippleDistance</Data>
+        </Slider>
+        <Slider name="NippleDown" invert="false" small="0" big="0">
+            <Data name="BodyNippleDown" target="Body" local="true">1MaleBody.osd\BodyNippleDown</Data>
+        </Slider>
+        <Slider name="NippleUp" invert="false" small="0" big="0">
+            <Data name="BodyNippleUp" target="Body" local="true">1MaleBody.osd\BodyNippleUp</Data>
+        </Slider>
+        <Slider name="PregnancyBelly" invert="false" small="0" big="0">
+            <Data name="BodyPregnancyBelly" target="Body" local="true">1MaleBody.osd\BodyPregnancyBelly</Data>
+            <Data name="UnderwearPregnancyBelly" target="Underwear" local="true">1MaleBody.osd\UnderwearPregnancyBelly</Data>
+        </Slider>
+        <Slider name="PushUp" invert="false" small="0" big="0">
+            <Data name="BodyPushUp" target="Body" local="true">1MaleBody.osd\BodyPushUp</Data>
+        </Slider>
+        <Slider name="RibsProminance" invert="false" small="0" big="0">
+            <Data name="BodyRibsProminance" target="Body" local="true">1MaleBody.osd\BodyRibsProminance</Data>
+        </Slider>
+        <Slider name="RoundAss" invert="false" small="0" big="0">
+            <Data name="BodyRoundAss" target="Body" local="true">1MaleBody.osd\BodyRoundAss</Data>
+            <Data name="UnderwearRoundAss" target="Underwear" local="true">1MaleBody.osd\UnderwearRoundAss</Data>
+        </Slider>
+        <Slider name="ShoulderSmooth" invert="false" small="0" big="0">
+            <Data name="BodyShoulderSmooth" target="Body" local="true">1MaleBody.osd\BodyShoulderSmooth</Data>
+        </Slider>
+        <Slider name="ShoulderTweak" invert="false" small="0" big="0">
+            <Data name="BodyShoulderTweak" target="Body" local="true">1MaleBody.osd\BodyShoulderTweak</Data>
+        </Slider>
+        <Slider name="ShoulderWidth" invert="false" small="0" big="0">
+            <Data name="BodyShoulderWidth" target="Body" local="true">1MaleBody.osd\BodyShoulderWidth</Data>
+        </Slider>
+        <Slider name="SlimThighs" invert="false" small="0" big="0">
+            <Data name="BodySlimThighs" target="Body" local="true">1MaleBody.osd\BodySlimThighs</Data>
+            <Data name="UnderwearSlimThighs" target="Underwear" local="true">1MaleBody.osd\UnderwearSlimThighs</Data>
+        </Slider>
+        <Slider name="SternumDepth" invert="false" small="0" big="0">
+            <Data name="BodySternumDepth" target="Body" local="true">1MaleBody.osd\BodySternumDepth</Data>
+        </Slider>
+        <Slider name="SternumHeight" invert="false" small="0" big="0">
+            <Data name="BodySternumHeight" target="Body" local="true">1MaleBody.osd\BodySternumHeight</Data>
+        </Slider>
+        <Slider name="Thighs" invert="false" small="0" big="0">
+            <Data name="BodyThighs" target="Body" local="true">1MaleBody.osd\BodyThighs</Data>
+            <Data name="UnderwearThighs" target="Underwear" local="true">1MaleBody.osd\UnderwearThighs</Data>
+        </Slider>
+        <Slider name="Waist" invert="false" small="0" big="0">
+            <Data name="BodyWaist" target="Body" local="true">1MaleBody.osd\BodyWaist</Data>
+            <Data name="UnderwearWaist" target="Underwear" local="true">1MaleBody.osd\UnderwearWaist</Data>
+        </Slider>
+        <Slider name="WaistHeight" invert="false" small="0" big="0">
+            <Data name="BodyWaistHeight" target="Body" local="true">1MaleBody.osd\BodyWaistHeight</Data>
+            <Data name="UnderwearWaistHeight" target="Underwear" local="true">1MaleBody.osd\UnderwearWaistHeight</Data>
+        </Slider>
+        <Slider name="WideWaistLine" invert="false" small="0" big="0">
+            <Data name="BodyWideWaistLine" target="Body" local="true">1MaleBody.osd\BodyWideWaistLine</Data>
+            <Data name="UnderwearWideWaistLine" target="Underwear" local="true">1MaleBody.osd\UnderwearWideWaistLine</Data>
+        </Slider>
+        <Slider name="LegShapeClassic" invert="false" small="0" big="0">
+            <Data name="BodyLegShapeClassic" target="Body" local="true">1MaleBody.osd\BodyLegShapeClassic</Data>
+            <Data name="UnderwearLegShapeClassic" target="Underwear" local="true">1MaleBody.osd\UnderwearLegShapeClassic</Data>
+        </Slider>
+        <Slider name="AreolaSize" invert="false" small="0" big="0">
+            <Data name="BodyAreolaSize" target="Body" local="true">1MaleBody.osd\BodyAreolaSize</Data>
+        </Slider>
+        <Slider name="NippleSize" invert="false" small="0" big="0">
+            <Data name="BodyNippleSize" target="Body" local="true">1MaleBody.osd\BodyNippleSize</Data>
+        </Slider>
+        <Slider name="NippleLength" invert="false" small="0" big="0">
+            <Data name="BodyNippleLength" target="Body" local="true">1MaleBody.osd\BodyNippleLength</Data>
+        </Slider>
+        <Slider name="SAM Samson" invert="false" small="0" big="0">
+            <Data name="BodySAM Samson" target="Body" local="true">1MaleBody.osd\BodySAM Samson</Data>
+            <Data name="UnderwearSAM Samson" target="Underwear" local="true">1MaleBody.osd\UnderwearSAM Samson</Data>
+        </Slider>
+        <Slider name="SAM Samuel" invert="false" small="0" big="0">
+            <Data name="BodySAM Samuel" target="Body" local="true">1MaleBody.osd\BodySAM Samuel</Data>
+            <Data name="UnderwearSAM Samuel" target="Underwear" local="true">1MaleBody.osd\UnderwearSAM Samuel</Data>
+        </Slider>
+        <Slider name="Vore prey belly" invert="false" small="0" big="0">
+            <Data name="BodyVore prey belly" target="Body" local="true">1MaleBody.osd\BodyVore prey belly</Data>
+            <Data name="UnderwearVore prey belly" target="Underwear" local="true">1MaleBody.osd\UnderwearVore prey belly</Data>
+        </Slider>
+        <Slider name="AnkleSize" invert="false" small="100" big="0">
+            <Data name="BodyAnkleSize" target="Body" local="true">1MaleBody.osd\BodyAnkleSize</Data>
+        </Slider>
+        <Slider name="BreastFlatness2" invert="false" small="0" big="0">
+            <Data name="BodyBreastFlatness2" target="Body" local="true">1MaleBody.osd\BodyBreastFlatness2</Data>
+        </Slider>
+        <Slider name="BreastFlatness" invert="false" small="0" big="0">
+            <Data name="BodyBreastFlatness" target="Body" local="true">1MaleBody.osd\BodyBreastFlatness</Data>
+        </Slider>
+        <Slider name="Breasts" invert="false" small="0" big="0">
+            <Data name="BodyBreasts" target="Body" local="true">1MaleBody.osd\BodyBreasts</Data>
+        </Slider>
+        <Slider name="BreastsFantasy" invert="false" small="0" big="0">
+            <Data name="BodyBreastsFantasy" target="Body" local="true">1MaleBody.osd\BodyBreastsFantasy</Data>
+        </Slider>
+        <Slider name="BreastsGone" invert="false" small="0" big="0">
+            <Data name="BodyBreastsGone" target="Body" local="true">1MaleBody.osd\BodyBreastsGone</Data>
+        </Slider>
+        <Slider name="BreastsNewSH" invert="false" small="0" big="0">
+            <Data name="BodyBreastsNewSH" target="Body" local="true">1MaleBody.osd\BodyBreastsNewSH</Data>
+        </Slider>
+        <Slider name="BreastsSmall" invert="false" small="0" big="0">
+            <Data name="BodyBreastsSmall" target="Body" local="true">1MaleBody.osd\BodyBreastsSmall</Data>
+            <Data name="UnderwearBreastsSmall" target="Underwear" local="true">1MaleBody.osd\UnderwearBreastsSmall</Data>
+        </Slider>
+        <Slider name="BreastsSmall2" invert="false" small="0" big="0">
+            <Data name="BodyBreastsSmall2" target="Body" local="true">1MaleBody.osd\BodyBreastsSmall2</Data>
+            <Data name="UnderwearBreastsSmall2" target="Underwear" local="true">1MaleBody.osd\UnderwearBreastsSmall2</Data>
+        </Slider>
+        <Slider name="CrotchBack" invert="false" small="0" big="0">
+            <Data name="BodyCrotchBack" target="Body" local="true">1MaleBody.osd\BodyCrotchBack</Data>
+            <Data name="UnderwearCrotchBack" target="Underwear" local="true">1MaleBody.osd\UnderwearCrotchBack</Data>
+        </Slider>
+        <Slider name="DoubleMelon" invert="false" small="0" big="0">
+            <Data name="BodyDoubleMelon" target="Body" local="true">1MaleBody.osd\BodyDoubleMelon</Data>
+        </Slider>
+        <Slider name="Groin" invert="false" small="0" big="0">
+            <Data name="BodyGroin" target="Body" local="true">1MaleBody.osd\BodyGroin</Data>
+            <Data name="UnderwearGroin" target="Underwear" local="true">1MaleBody.osd\UnderwearGroin</Data>
+        </Slider>
+        <Slider name="HipForward" invert="false" small="0" big="0">
+            <Data name="BodyHipForward" target="Body" local="true">1MaleBody.osd\BodyHipForward</Data>
+            <Data name="UnderwearHipForward" target="Underwear" local="true">1MaleBody.osd\UnderwearHipForward</Data>
+        </Slider>
+        <Slider name="NipBGone" invert="false" small="0" big="0">
+            <Data name="BodyNipBGone" target="Body" local="true">1MaleBody.osd\BodyNipBGone</Data>
+        </Slider>
+        <Slider name="NippleManga" invert="false" small="0" big="0">
+            <Data name="BodyNippleManga" target="Body" local="true">1MaleBody.osd\BodyNippleManga</Data>
+        </Slider>
+        <Slider name="NipplePerkiness" invert="false" small="0" big="0">
+            <Data name="BodyNipplePerkiness" target="Body" local="true">1MaleBody.osd\BodyNipplePerkiness</Data>
+        </Slider>
+        <Slider name="NipplePerkManga" invert="false" small="0" big="0">
+            <Data name="BodyNipplePerkManga" target="Body" local="true">1MaleBody.osd\BodyNipplePerkManga</Data>
+        </Slider>
+        <Slider name="NippleTip" invert="false" small="0" big="0">
+            <Data name="BodyNippleTip" target="Body" local="true">1MaleBody.osd\BodyNippleTip</Data>
+        </Slider>
+        <Slider name="NippleTipManga" invert="false" small="0" big="0">
+            <Data name="BodyNippleTipManga" target="Body" local="true">1MaleBody.osd\BodyNippleTipManga</Data>
+        </Slider>
+        <Slider name="TummyTuck" invert="false" small="0" big="0">
+            <Data name="BodyTummyTuck" target="Body" local="true">1MaleBody.osd\BodyTummyTuck</Data>
+            <Data name="UnderwearTummyTuck" target="Underwear" local="true">1MaleBody.osd\UnderwearTummyTuck</Data>
+        </Slider>
+        <Slider name="WristSize" invert="false" small="100" big="0">
+            <Data name="BodyWristSize" target="Body" local="true">1MaleBody.osd\BodyWristSize</Data>
+        </Slider>
+        <Slider name="7B Lower" invert="false" small="0" big="0">
+            <Data name="Body7B Lower" target="Body" local="true">1MaleBody.osd\Body7B Lower</Data>
+            <Data name="Underwear7B Lower" target="Underwear" local="true">1MaleBody.osd\Underwear7B Lower</Data>
+        </Slider>
+        <Slider name="7B Upper" invert="false" small="0" big="0">
+            <Data name="Body7B Upper" target="Body" local="true">1MaleBody.osd\Body7B Upper</Data>
+        </Slider>
+        <Slider name="VanillaSSEHi" invert="false" small="0" big="0">
+            <Data name="BodyVanillaSSEHi" target="Body" local="true">1MaleBody.osd\BodyVanillaSSEHi</Data>
+            <Data name="UnderwearVanillaSSEHi" target="Underwear" local="true">1MaleBody.osd\UnderwearVanillaSSEHi</Data>
+        </Slider>
+        <Slider name="VanillaSSELo" invert="false" small="0" big="0">
+            <Data name="BodyVanillaSSELo" target="Body" local="true">1MaleBody.osd\BodyVanillaSSELo</Data>
+            <Data name="UnderwearVanillaSSELo" target="Underwear" local="true">1MaleBody.osd\UnderwearVanillaSSELo</Data>
+        </Slider>
+        <Slider name="OldBaseShape" invert="false" small="0" big="0">
+            <Data name="BodyOldBaseShape" target="Body" local="true">1MaleBody.osd\BodyOldBaseShape</Data>
+            <Data name="UnderwearOldBaseShape" target="Underwear" local="true">1MaleBody.osd\UnderwearOldBaseShape</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" small="0" big="0">
+            <Data name="BodyStruggleSlider1" target="Body" local="true">1MaleBody.osd\BodyStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" small="0" big="0">
+            <Data name="BodyStruggleSlider2" target="Body" local="true">1MaleBody.osd\BodyStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" small="0" big="0">
+            <Data name="BodyStruggleSlider3" target="Body" local="true">1MaleBody.osd\BodyStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsHorker">
+        <DataFolder>1CreatureMorphsHorker</DataFolder>
+        <SourceFile>1CreatureMorphsHorker.nif</SourceFile>
+        <OutputPath>meshes\actors\horker\character assets</OutputPath>
+        <OutputFile GenWeights="false">horker</OutputFile>
+        <Shape target="Horker:0">Horker:0</Shape>
+        <Shape target="Horker:1">Horker:1</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Horker:0Vore prey belly" target="Horker:0" local="true">1CreatureMorphsHorker.osd\Horker:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="Horker:0StruggleSlider1" target="Horker:0" local="true">1CreatureMorphsHorker.osd\Horker:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="Horker:0StruggleSlider2" target="Horker:0" local="true">1CreatureMorphsHorker.osd\Horker:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="Horker:0StruggleSlider3" target="Horker:0" local="true">1CreatureMorphsHorker.osd\Horker:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

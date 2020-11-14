@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsSpider">
+        <DataFolder>1CreatureMorphsSpider</DataFolder>
+        <SourceFile>1CreatureMorphsSpider.nif</SourceFile>
+        <OutputPath>meshes\actors\frostbitespider\character assets</OutputPath>
+        <OutputFile GenWeights="false">frostbitespider</OutputFile>
+        <Shape target="S_Body0180percent">S_Body0180percent</Shape>
+        <Shape target="S_Hiars01Reduced">S_Hiars01Reduced</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="S_Body0180percentVore prey belly" target="S_Body0180percent" local="true">1CreatureMorphsSpider.osd\S_Body0180percentVore prey belly</Data>
+            <Data name="S_Hiars01ReducedVore prey belly" target="S_Hiars01Reduced" local="true">1CreatureMorphsSpider.osd\S_Hiars01ReducedVore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="S_Body0180percentStruggleSlider1" target="S_Body0180percent" local="true">1CreatureMorphsSpider.osd\S_Body0180percentStruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="S_Body0180percentStruggleSlider2" target="S_Body0180percent" local="true">1CreatureMorphsSpider.osd\S_Body0180percentStruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="S_Body0180percentStruggleSlider3" target="S_Body0180percent" local="true">1CreatureMorphsSpider.osd\S_Body0180percentStruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

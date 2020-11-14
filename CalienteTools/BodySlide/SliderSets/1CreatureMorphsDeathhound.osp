@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsDeathhound">
+        <DataFolder>1CreatureMorphsDeathhound</DataFolder>
+        <SourceFile>1CreatureMorphsDeathhound.nif</SourceFile>
+        <OutputPath>meshes\dlc01\actors\vampiredog</OutputPath>
+        <OutputFile GenWeights="false">vampiredog</OutputFile>
+        <Shape target="Box01">Box01</Shape>
+        <Shape target="DogEyeBall:0">DogEyeBall:0</Shape>
+        <Shape target="DogEyeBall:1">DogEyeBall:1</Shape>
+        <Shape target="DogEyeBall:4">DogEyeBall:4</Shape>
+        <Shape target="DogEyeBall:8">DogEyeBall:8</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Box01Vore prey belly" target="Box01" local="true">1CreatureMorphsDeathhound.osd\Box01Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="Box01StruggleSlider1" target="Box01" local="true">1CreatureMorphsDeathhound.osd\Box01StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="Box01StruggleSlider2" target="Box01" local="true">1CreatureMorphsDeathhound.osd\Box01StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="Box01StruggleSlider3" target="Box01" local="true">1CreatureMorphsDeathhound.osd\Box01StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

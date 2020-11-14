@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorhpsDraugrm3">
+        <DataFolder>1CreatureMorhpsDraugrm3</DataFolder>
+        <SourceFile>1CreatureMorhpsDraugrm3.nif</SourceFile>
+        <OutputPath>meshes\actors\draugr\character assets</OutputPath>
+        <OutputFile GenWeights="false">draugrmale02</OutputFile>
+        <Shape target="ArmorChest00">ArmorChest00</Shape>
+        <Shape target="ArmorWaist00">ArmorWaist00</Shape>
+        <Shape target="ArmorWaist01">ArmorWaist01</Shape>
+        <Shape target="Body_Male_Naked">Body_Male_Naked</Shape>
+        <Shape target="Eye_L">Eye_L</Shape>
+        <Shape target="Eye_R">Eye_R</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Body_Male_NakedVore prey belly" target="Body_Male_Naked" local="true">1CreatureMorhpsDraugrm3.osd\Body_Male_NakedVore prey belly</Data>
+            <Data name="ArmorChest00Vore prey belly" target="ArmorChest00" local="true">1CreatureMorhpsDraugrm3.osd\ArmorChest00Vore prey belly</Data>
+            <Data name="ArmorWaist01Vore prey belly" target="ArmorWaist01" local="true">1CreatureMorhpsDraugrm3.osd\ArmorWaist01Vore prey belly</Data>
+            <Data name="ArmorWaist00Vore prey belly" target="ArmorWaist00" local="true">1CreatureMorhpsDraugrm3.osd\ArmorWaist00Vore prey belly</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

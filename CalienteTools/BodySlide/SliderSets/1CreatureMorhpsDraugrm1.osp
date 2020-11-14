@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorhpsDraugrm1">
+        <DataFolder>1CreatureMorhpsDraugrm1</DataFolder>
+        <SourceFile>1CreatureMorhpsDraugrm1.nif</SourceFile>
+        <OutputPath>meshes\actors\draugr\character assets</OutputPath>
+        <OutputFile GenWeights="false">draugrmale</OutputFile>
+        <Shape target="ArmorWaist01">ArmorWaist01</Shape>
+        <Shape target="Body_Male_Naked">Body_Male_Naked</Shape>
+        <Shape target="Eye_L">Eye_L</Shape>
+        <Shape target="Eye_R">Eye_R</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="Body_Male_NakedVore prey belly" target="Body_Male_Naked" local="true">1CreatureMorhpsDraugrm1.osd\Body_Male_NakedVore prey belly</Data>
+            <Data name="ArmorWaist01Vore prey belly" target="ArmorWaist01" local="true">1CreatureMorhpsDraugrm1.osd\ArmorWaist01Vore prey belly</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>

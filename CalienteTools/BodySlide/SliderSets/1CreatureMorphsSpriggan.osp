@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SliderSetInfo version="1">
+    <SliderSet name="1CreatureMorphsSpriggan">
+        <DataFolder>1CreatureMorphsSpriggan</DataFolder>
+        <SourceFile>1CreatureMorphsSpriggan.nif</SourceFile>
+        <OutputPath>meshes\actors\spriggan\character assets</OutputPath>
+        <OutputFile GenWeights="false">spriggan</OutputFile>
+        <Shape target="SprigganBodyLeaves">SprigganBodyLeaves</Shape>
+        <Shape target="SprigganFxHandCovers">SprigganFxHandCovers</Shape>
+        <Shape target="SprigganFxTestUnified:0">SprigganFxTestUnified:0</Shape>
+        <Shape target="SprigganHandLeaves">SprigganHandLeaves</Shape>
+        <Slider name="Vore prey belly" invert="false" default="0">
+            <Data name="SprigganBodyLeavesVore prey belly" target="SprigganBodyLeaves" local="true">1CreatureMorphsSpriggan.osd\SprigganBodyLeavesVore prey belly</Data>
+            <Data name="SprigganFxTestUnified:0Vore prey belly" target="SprigganFxTestUnified:0" local="true">1CreatureMorphsSpriggan.osd\SprigganFxTestUnified:0Vore prey belly</Data>
+        </Slider>
+        <Slider name="StruggleSlider1" invert="false" default="0">
+            <Data name="SprigganBodyLeavesStruggleSlider1" target="SprigganBodyLeaves" local="true">1CreatureMorphsSpriggan.osd\SprigganBodyLeavesStruggleSlider1</Data>
+            <Data name="SprigganFxTestUnified:0StruggleSlider1" target="SprigganFxTestUnified:0" local="true">1CreatureMorphsSpriggan.osd\SprigganFxTestUnified:0StruggleSlider1</Data>
+        </Slider>
+        <Slider name="StruggleSlider2" invert="false" default="0">
+            <Data name="SprigganBodyLeavesStruggleSlider2" target="SprigganBodyLeaves" local="true">1CreatureMorphsSpriggan.osd\SprigganBodyLeavesStruggleSlider2</Data>
+            <Data name="SprigganFxTestUnified:0StruggleSlider2" target="SprigganFxTestUnified:0" local="true">1CreatureMorphsSpriggan.osd\SprigganFxTestUnified:0StruggleSlider2</Data>
+        </Slider>
+        <Slider name="StruggleSlider3" invert="false" default="0">
+            <Data name="SprigganBodyLeavesStruggleSlider3" target="SprigganBodyLeaves" local="true">1CreatureMorphsSpriggan.osd\SprigganBodyLeavesStruggleSlider3</Data>
+            <Data name="SprigganFxTestUnified:0StruggleSlider3" target="SprigganFxTestUnified:0" local="true">1CreatureMorphsSpriggan.osd\SprigganFxTestUnified:0StruggleSlider3</Data>
+        </Slider>
+    </SliderSet>
+</SliderSetInfo>
