@@ -1,93 +1,95 @@
 Scriptname DevourmentNameScript extends Quest  
 
-Bool Property nameChanged Auto
-String Property newName Auto
-String Property lastName Auto
-Spell Property NotThere Auto
-Spell Property SwallowSpell Auto
-Spell Property EndoSpell Auto
-Spell Property Aura Auto
-Message Property NewPlayerMessage Auto
-Message Property NewPlayerMessageToo Auto
-Perk[] Property AllThePerks Auto
-ObjectReference Property HerStomach Auto
-Spell Property devourment Auto
-Spell Property devourmentNL Auto
-EffectShader Property AbsorbVisual Auto
-Explosion Property AbsorbExplosion Auto
-Sound Property AbsorbSound Auto
-Sound Property AbsorbFinishSound Auto
-GlobalVariable Property prevDov Auto
-GlobalVariable Property DevourmentPerkGlobal Auto
-GlobalVariable Property DevourmentPrevPerkGlobal Auto
-GlobalVariable Property NumVictims Auto
-GlobalVariable Property NoRaceMenu Auto
-Perk Property V1 Auto
-Perk Property V2 Auto
-Perk Property V3 Auto
-Perk Property V4 Auto
-Perk Property V5 Auto
-Perk Property IS1 Auto
-Perk Property IS2 Auto
-Perk Property IS3 Auto
-Perk Property SA1 Auto
-Perk Property SA2 Auto
-Perk Property SA3 Auto
-Perk Property N1 Auto
-Perk Property N2 Auto
-Perk Property CE Auto
-Perk Property SS Auto
-Perk Property SB Auto
-Perk Property SF Auto
-Perk Property SwallowCorpse Auto
-GlobalVariable Property prevDovBountyWhiterun Auto
-GlobalVariable Property prevDovBountyWindhelm Auto
-GlobalVariable Property prevDovBountyRiften Auto
-GlobalVariable Property prevDovBountyMarkarth Auto
-GlobalVariable Property prevDovBountyMorthal Auto
-GlobalVariable Property prevDovBountySolitude Auto
-GlobalVariable Property prevDovBountyWinterhold Auto
-GlobalVariable Property prevDovBountyDawnstar Auto
-GlobalVariable Property prevDovBountyFalkreath Auto
-Faction Property Whiterun Auto
-Faction Property Windhelm Auto
-Faction Property Riften Auto
-Faction Property Markarth Auto
-Faction Property Morthal Auto
-Faction Property Solitude Auto
-Faction Property Winterhold Auto
-Faction Property Dawnstar Auto
-Faction Property Falkreath Auto
-Actor Property fakePlayer Auto
-ReferenceAlias Property fakePlayerRef Auto
-ReferenceAlias Property FollowerAlias Auto
-Faction Property DismissedFaction Auto
-Faction Property FollowerFaction Auto
-DialogueFollowerScript Property FollowerScript Auto
-Quest Property BreakupQuest Auto
-Quest Property MarriageQuest Auto
-Quest Property MarriageFINQuest Auto
-Quest Property WeddingQuest Auto
-Faction Property PlayerMarriedFaction Auto
-Faction Property FacBanditAlly Auto
-Faction Property FacBandit Auto
-Faction Property FacBanditFriend Auto
-Faction Property FacWinterhold Auto
-Faction Property FacComp Auto
-Faction Property FacDB Auto
-Faction Property FacForsworn Auto
-Faction Property FacNecro Auto
-Faction Property FacSilverHand Auto
-Faction Property FacThalmor Auto
-Faction Property FacThief Auto
-Faction Property FacVamp Auto
-Faction Property FacVampThrall Auto
-Faction Property FacWarlockAlly Auto
-Faction Property FacWarlock Auto
-Spell Property DevourmentNPC Auto
-SKI_ConfigBase Property MenuScript Auto
-Actor Property humanRef Auto
-Actor Property beastRef Auto
+Actor 				Property fakePlayer 				Auto
+Actor 				Property humanRef 					Auto
+Actor 				Property beastRef 					Auto
+Bool 				Property nameChanged 				Auto
+String 				Property newName 					Auto Hidden
+String 				Property lastName 					Auto Hidden
+Message 			Property NewPlayerMessage 			Auto
+Message 			Property NewPlayerMessageToo 		Auto
+Perk[] 				Property AllThePerks 				Auto
+ObjectReference 	Property HerStomach 				Auto
+Spell 				Property NotThere 					Auto
+Spell 				Property SwallowSpell 				Auto
+Spell 				Property EndoSpell 					Auto
+Spell 				Property Aura 						Auto
+Spell 				Property devourment 				Auto
+Spell 				Property devourmentNL 				Auto
+Spell 				Property DevourmentNPC 				Auto
+EffectShader 		Property AbsorbVisual 				Auto
+Explosion 			Property AbsorbExplosion 			Auto
+Sound 				Property AbsorbSound 				Auto
+Sound 				Property AbsorbFinishSound 			Auto
+GlobalVariable 		Property prevDov 					Auto
+GlobalVariable 		Property DevourmentPerkGlobal 		Auto
+GlobalVariable 		Property DevourmentPrevPerkGlobal 	Auto
+GlobalVariable 		Property NumVictims 				Auto
+GlobalVariable 		Property NoRaceMenu 				Auto
+GlobalVariable 		Property prevDovBountyWhiterun 		Auto
+GlobalVariable 		Property prevDovBountyWindhelm 		Auto
+GlobalVariable 		Property prevDovBountyRiften 		Auto
+GlobalVariable 		Property prevDovBountyMarkarth 		Auto
+GlobalVariable 		Property prevDovBountyMorthal 		Auto
+GlobalVariable 		Property prevDovBountySolitude 		Auto
+GlobalVariable 		Property prevDovBountyWinterhold 	Auto
+GlobalVariable 		Property prevDovBountyDawnstar 		Auto
+GlobalVariable 		Property prevDovBountyFalkreath 	Auto
+GlobalVariable 		Property Debugging 					Auto  
+{Handles Debugging}
+Perk 				Property V1 						Auto
+Perk 				Property V2 						Auto
+Perk 				Property V3 						Auto
+Perk 				Property V4 						Auto
+Perk 				Property V5 						Auto
+Perk 				Property IS1 						Auto
+Perk 				Property IS2 						Auto
+Perk 				Property IS3 						Auto
+Perk 				Property SA1 						Auto
+Perk 				Property SA2 						Auto
+Perk 				Property SA3 						Auto
+Perk 				Property N1 						Auto
+Perk 				Property N2 						Auto
+Perk 				Property CE 						Auto
+Perk 				Property SS 						Auto
+Perk 				Property SB 						Auto
+Perk 				Property SF 						Auto
+Perk 				Property SwallowCorpse 				Auto
+Faction 			Property Whiterun 					Auto
+Faction 			Property Windhelm 					Auto
+Faction 			Property Riften 					Auto
+Faction 			Property Markarth 					Auto
+Faction 			Property Morthal 					Auto
+Faction 			Property Solitude 					Auto
+Faction 			Property Winterhold 				Auto
+Faction 			Property Dawnstar 					Auto
+Faction 			Property Falkreath 					Auto
+Faction 			Property DismissedFaction 			Auto
+Faction 			Property FollowerFaction 			Auto
+Faction 			Property PlayerMarriedFaction 		Auto
+Faction 			Property FacBanditAlly 				Auto
+Faction 			Property FacBandit 					Auto
+Faction 			Property FacBanditFriend 			Auto
+Faction 			Property FacWinterhold 				Auto
+Faction 			Property FacComp 					Auto
+Faction 			Property FacDB 						Auto
+Faction 			Property FacForsworn 				Auto
+Faction 			Property FacNecro 					Auto
+Faction 			Property FacSilverHand 				Auto
+Faction 			Property FacThalmor 				Auto
+Faction 			Property FacThief 					Auto
+Faction 			Property FacVamp 					Auto
+Faction 			Property FacVampThrall 				Auto
+Faction 			Property FacWarlockAlly 			Auto
+Faction 			Property FacWarlock 				Auto
+ReferenceAlias 		Property fakePlayerRef 				Auto
+ReferenceAlias 		Property FollowerAlias 				Auto
+Quest 				Property BreakupQuest 				Auto
+Quest 				Property MarriageQuest 				Auto
+Quest 				Property MarriageFINQuest 			Auto
+Quest 				Property WeddingQuest 				Auto
+SKI_ConfigBase 		Property MenuScript 				Auto
+DialogueFollowerScript Property FollowerScript 			Auto
 
 Event OnInit()
 	SetPlayerName()
@@ -97,31 +99,35 @@ EndEvent
 Function SetPlayerName()
 	if(nameChanged)
 		Game.GetPlayer().getLeveledActorBase().setName(newName)
+		Debugger(Game.GetPlayer().GetName()+" is the players new name after Name Change.", "DevourmentNameScript")
 	endif
 EndFunction
 
 Function CheckDependencies()
 	if(!Game.GetModByName("Devourment.esp"))
 		Debug.MessageBox("WARNING: Skyrim Script Extender is not running. Devourment will not function properly!")
+		Debugger("WARNING: Skyrim Script Extender is not running. Devourment will not function properly!", "DevourmentNameScript")
 	else
 		if(!checkSkeleton())
 			Debug.MessageBox("WARNING: Incompatible skeleton detected. Devourment will not function properly!")
+			Debugger("WARNING: Incompatible skeleton detected. Devourment will not function properly!", "DevourmentNameScript")
 		endif
 	endif
 	if(!Game.GetModByName("SkyUI.esp"))
 		Debug.MessageBox("WARNING: SkyUI is not installed. Devourment will not function properly!")
+		Debugger("WARNING: SkyUI is not installed. Devourment will not function properly!", "DevourmentNameScript")
 	endif
 	checkPlayerSpells()
 EndFunction
 
 Function SwitchPlayer(Actor thePred, Actor thePrey)
-
+				Debugger("Changing Actor", "DevourmentNameScript")
 				absorbVisual.play(thePred,5)
 				absorbSound.play(thePred)
 				; player takes her name
-; Debug.messageBox("Name changed")
 				lastName=thePrey.getActorBase().getName()
 				newName=thePred.getLeveledActorBase().getName()
+				Debugger("Name changed from "+LastName+" to "+NewName, "DevourmentNameScript")
 				nameChanged=true
 				setPlayerName()
 				fakePlayer.getLeveledActorBase().setName(lastName)
@@ -139,7 +145,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 
 				; hair color
 				playerBase.setHairColor(predBase.getHairColor())
-; Debug.messageBox("Hair color changed")
+				Debugger("Hair color changed", "DevourmentNameScript")
 
 				; head parts
 				int whichPart=0
@@ -153,14 +159,14 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 					whichPart=whichPart+1
 				endWhile
 				; playerBase.setFaceTextureSet(predBase.getFaceTextureSet())
-; Debug.messageBox("Head parts changed")
+				Debugger("Head parts changed", "DevourmentNameScript")
 				
 				; presets
 				playerBase.setFacePreset(predBase.getFacePreset(0),0)
 				playerBase.setFacePreset(predBase.getFacePreset(1),1)
 				playerBase.setFacePreset(predBase.getFacePreset(2),2)
 				playerBase.setFacePreset(predBase.getFacePreset(3),3)
-; Debug.messageBox("Presets changed")				
+				Debugger("Presets changed", "DevourmentNameScript")				
 
 				; face morphs
 				int whichMorph=0
@@ -169,7 +175,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 					whichMorph=whichMorph+1
 				endWhile
 				thePrey.regenerateHead()
-; Debug.messageBox("Morphs changed")
+				Debugger("Morphs changed", "DevourmentNameScript")
 
 				; weight
 				int playerWeight=playerBase.getWeight() as Int
@@ -180,12 +186,12 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 					thePrey.updateWeight(neck)
 					; thePred.QueueNiNodeUpdate()
 				endif
-; Debug.messageBox("Weight changed")
+				Debugger("Weight changed", "DevourmentNameScript")
 
 				; race
 				if(thePrey.getRace()!=thePred.getRace())
 					thePrey.setRace(thePred.getRace())
-; Debug.messageBox("Race changed")
+				Debugger("Race changed", "DevourmentNameScript")
 				endif
 
 				; spells
@@ -216,7 +222,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 				thePrey.addSpell(devourment, false)
 				thePrey.addSpell(devourmentNL, false)
 				thePrey.addSpell(devourmentNPC, false)
-; Debug.messageBox("Spells changed")
+				Debugger("Spells changed", "DevourmentNameScript")
 
 				; items
 				int[] slotMasks=new int[29]
@@ -262,7 +268,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 				Form leftItem=thePred.getEquippedObject(0)
 				Form rightItem=thePred.getEquippedObject(1)
 				Form voiceItem=thePred.getEquippedObject(2)
-; Debug.messageBox("Items calculated")
+				Debugger("Items calculated", "DevourmentNameScript")
 
 				; perks
 				int whichPerk=0
@@ -288,7 +294,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 				Game.getPlayer().removePerk(SS)
 				Game.getPlayer().removePerk(SB)
 				Game.getPlayer().removePerk(SF)
-; Debug.messageBox("Perks reset")
+				Debugger("Perks reset", "DevourmentNameScript")
 
 				; all the freakin actor values
 				String[] AVArray = new String[33]
@@ -345,7 +351,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 				else
 					thePrey.forceAV("Variable05",85)
 				endif
-; Debug.messageBox("Actor values changed")
+				Debugger("Actor values changed", "DevourmentNameScript")
 
 				; devourment perks
 				DevourmentPerkGlobal.setValue(DevourmentPrevPerkGlobal.getValue())
@@ -430,11 +436,6 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 				falkreath.setCrimeGoldViolent(0)
 
 				; followers
-				;/Actor formerFollower=FollowerAlias.getActorRef() as Actor
-				formerFollower.AddToFaction(DismissedFaction)
-				formerFollower.SetPlayerTeammate(false)
-				formerFollower.RemoveFromFaction(followerFaction)
-				formerFollower.SetAV("WaitingForPlayer", 0)/;
 				FollowerScript.dismissFollower(0,0)
 
 				; remove spouse
@@ -465,7 +466,7 @@ Function SwitchPlayer(Actor thePred, Actor thePrey)
 					endif
 					whichSlot=whichSlot+1
 				endWhile
-; Debug.messageBox("Items changed")
+				Debugger("Items changed", "DevourmentNameScript")
 
 				thePred.placeAtMe(absorbExplosion)
 				absorbFinishSound.play(thePred)
@@ -499,13 +500,13 @@ bool Function checkSkeleton()
 	if(Game.getPlayer().getLeveledActorBase().getSex()!=1)
 		return !NetImmerse.hasNode(Game.getPlayer(), "Devourment Belly Root", false)
 	else
-		; Debug.messageBox(NetImmerse.hasNode(Game.getPlayer(), "Devourment Belly Root", false))
-		; Debug.messageBox(!NetImmerse.hasNode(Game.getPlayer(), "NPC GenitalsBase [GenBase]", false))
+		Debugger(Game.getPlayer().GetDisplayName()+" has skeleton Node Devour Belly Root: "+NetImmerse.hasNode(Game.getPlayer(), "Devourment Belly Root", false), "DevourmentNameScript")
+		Debugger(Game.getPlayer().GetDisplayName()+" has skeleton Node Genital Base: "+!NetImmerse.hasNode(Game.getPlayer(), "NPC GenitalsBase [GenBase]", false), "DevourmentNameScript")
 		return NetImmerse.hasNode(Game.getPlayer(), "Devourment Belly Root", false); && !NetImmerse.hasNode(Game.getPlayer(), "NPC GenitalsBase [GenBase]", false)
 	endif
 	; bool humanSkeleton=NetImmerse.hasNode(humanRef, "Devourment Belly Root", false) && !NetImmerse.hasNode(humanRef, "NPC GenitalsBase [GenBase]", false)
-	; Debug.messageBox(NetImmerse.hasNode(humanRef, "Devourment Belly Root", false))
-	; Debug.messageBox(!NetImmerse.hasNode(humanRef, "NPC GenitalsBase [GenBase]", false))
+	Debugger(HumanRef.GetDisplayName()+" has skeleton Node Devour Belly Root: "+NetImmerse.hasNode(humanRef, "Devourment Belly Root", false), "DevourmentNameScript")
+	Debugger(HumanRef.GetDisplayName()+" has skeleton Node GenitalBase: "+!NetImmerse.hasNode(humanRef, "NPC GenitalsBase [GenBase]", false), "DevourmentNameScript")
 	; bool beastSkeleton=NetImmerse.hasNode(beastRef, "Devourment Belly Root", false) && !NetImmerse.hasNode(beastRef, "NPC GenitalsBase [GenBase]", false)
 	; return humanSkeleton && beastSkeleton
 EndFunction
@@ -526,4 +527,11 @@ Function checkPlayerSpells()
 	if(!thePlayer.hasSpell(Aura))
 		ThePlayer.addSpell(Aura, true)
 	endif
+EndFunction
+
+Function Debugger(String Text, String MyScriptName)
+	If Debugging.GetValue() == 1
+		MiscUtil.PrintConsole("Devourment: ("+MyScriptName+") "+Text)
+		Debug.Trace("Devourment: ("+MyScriptName+") "+Text)
+	EndIf
 EndFunction

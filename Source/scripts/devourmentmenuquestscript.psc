@@ -1,5 +1,10 @@
 Scriptname DevourmentMenuQuestScript extends SKI_ConfigBase  
 
+; Debugging
+
+Int DebugJB
+Int ToggleVal
+
 ; positions
 
 int NPCpredPos
@@ -8,13 +13,33 @@ int skillPos
 int essentialPos
 int newPlayerPos
 int raceMenuPos
+int fempredpos
+int malepredpos
+int multipreypos
+int multipreynpcpos
+int animalpredpos
+int strugglepos
+int Shititemspos
+int BreastVorepos
+int CockVorepos
+int Morphanimpos
+int noescapepos
+int strippos
+int loadscreenpos
+int playercentricpos
+int unwillingaudiopos
+int ScatMoanspos
+int MorphOnlypos
 
 int dTimePos
 int dMinPos
 int sMinPos
+int bellyscaleminpos
 int NPCbonusPos
 int weightPos
+int damagemodpos
 
+; Predator perk tree
 int V1pos
 int V2pos
 int V3pos
@@ -31,7 +56,32 @@ int N2pos
 int CEpos
 int SSpos
 int SFpos
-int SBpos
+int CGpos
+
+
+; Prey perk tree
+int SD1Pos
+int SD2Pos
+int SD3Pos
+int SD4Pos
+int SD5Pos
+
+int R1Pos
+int R2Pos
+int R3Pos
+int R4Pos
+int R5Pos
+
+int S1Pos
+int S2Pos
+int S3Pos
+int S4Pos
+int S5Pos
+
+int PGPos
+int DEPos
+int COPos
+int RDPos
 
 ; values
 
@@ -41,16 +91,33 @@ int skill = 4
 bool essential = false
 bool newPlayer=true
 bool disableRace=false
+bool fempredbool =True
+bool malepredbool =True
+bool multipreybool = false
+bool multipreynpcbool = false
+bool animalpredbool = false
+bool strugglebool = True
+bool Shititemsbool = False
+bool BreastVorebool = False
+bool CockVorebool = false
+bool Morphanimbool = false
+bool noescapebool = false
+bool stripbool = false
+bool loadscreenbool = true
+bool playercentricbool = false
+bool unwillingaudiobool = true
+bool ScatMoansbool = true
+bool MorphOnlybool = false
 
-float dTime = 1.0
-int dMin = 250
-int sMin = 5
-float NPCbonus = 1.0
-int weight = 2
-
-int flag=0
-
-int thePage=0
+float 	dTime = 1.0
+int 	dMin = 250
+int 	sMin = 5
+float 	bellyscaleint= 1.0
+float 	NPCbonus = 1.0
+int 	weight = 2
+float 	damagemodf = 1.0
+int 	flag=0
+int 	thePage=0
 
 ; globals
 
@@ -59,13 +126,33 @@ GlobalVariable Property fateGlobal Auto
 GlobalVariable Property skillGlobal Auto
 GlobalVariable Property essentialGlobal Auto
 GlobalVariable Property disableRaceGlobal Auto
+GlobalVariable Property Fempred Auto
+GlobalVariable Property Malepred Auto
+GlobalVariable Property Multiprey Auto
+GlobalVariable Property Multipreynpc Auto
+GlobalVariable Property Animalpred Auto
+GlobalVariable Property struggle Auto
+GlobalVariable Property Shititems auto
+GlobalVariable Property Breastvore auto
+GlobalVariable Property Cockvore Auto
+GlobalVariable Property Morphanim auto
+GlobalVariable Property Noescape auto
+GlobalVariable Property strip auto
+GlobalVariable Property loadscreen auto
+GlobalVariable Property playercentric auto
+GlobalVariable Property Unwillingaudio auto
+GlobalVariable Property ScatMoans Auto
+GlobalVariable Property MorphOnly Auto
 
 GlobalVariable Property dTimeGlobal Auto
 GlobalVariable Property dMinGlobal Auto
 GlobalVariable Property sMinGlobal Auto
 GlobalVariable Property NPCbonusGlobal Auto
 GlobalVariable Property weightGlobal Auto
-
+GlobalVariable Property damagemod auto
+GlobalVariable Property version Auto  
+GlobalVariable Property Debugger Auto
+GlobalVariable Property NewPlayerGlobal  Auto  
 GlobalVariable Property Victims  Auto
 GlobalVariable Property perkPoints Auto
 GlobalVariable Property prevPerkPoints  Auto 
@@ -79,7 +166,37 @@ GlobalVariable Property khaD Auto
 GlobalVariable Property norD Auto
 GlobalVariable Property orsD Auto
 GlobalVariable Property redD Auto
-
+GlobalVariable Property _DragonEaten Auto
+GlobalVariable Property _HorseEaten Auto
+GlobalVariable Property _TrollEaten Auto
+GlobalVariable Property _DraugrEaten Auto
+GlobalVariable Property _FalmerEaten Auto
+GlobalVariable Property _FoxEaten Auto
+GlobalVariable Property _FishEaten Auto
+GlobalVariable Property _BearEaten Auto
+GlobalVariable Property _MudcrabEaten Auto
+GlobalVariable Property _SpiderEaten Auto
+GlobalVariable Property _ChickenEaten Auto
+GlobalVariable Property _DogEaten Auto
+GlobalVariable Property _DeerEaten Auto
+GlobalVariable Property _GoatEaten Auto
+GlobalVariable Property _CowEaten Auto
+GlobalVariable Property _ChaurusEaten Auto
+GlobalVariable Property _GiantEaten Auto
+GlobalVariable Property _DwarvenMachineEaten Auto
+GlobalVariable Property _HagravenEaten Auto
+GlobalVariable Property _MammothEaten Auto
+GlobalVariable Property _SabrecatEaten Auto
+GlobalVariable Property _WerewolfEaten Auto
+GlobalVariable Property _WolfEaten Auto
+GlobalVariable Property _DragonPriestEaten Auto
+GlobalVariable Property _DremoraEaten Auto
+GlobalVariable Property _HareEaten Auto
+GlobalVariable Property _HorkerEaten Auto
+GlobalVariable Property _VampireEaten Auto
+GlobalVariable Property _WomenEaten Auto
+GlobalVariable Property _MenEaten Auto
+GlobalVariable Property _bellyscale Auto
 GlobalVariable Property prevDov Auto
 
 ; arrays
@@ -88,7 +205,7 @@ string[] NPCpredList
 string[] fateList
 string[] notList
 
-; perks
+; Predator perks
 
 Perk Property V1 Auto
 Perk Property V2 Auto
@@ -105,9 +222,34 @@ Perk Property N1 Auto
 Perk Property N2 Auto
 Perk Property CE Auto
 Perk Property SS Auto
-Perk Property SB Auto
 Perk Property SF Auto
+Perk Property CG Auto
+Perk Property RD Auto
 Perk Property SwallowCorpse Auto
+
+; Prey Perks
+Perk Property SD1 Auto
+Perk Property SD2 Auto
+Perk Property SD3 Auto
+Perk Property SD4 Auto
+Perk Property SD5 Auto
+
+Perk Property R1 Auto
+Perk Property R2 Auto
+Perk Property R3 Auto
+Perk Property R4 Auto
+Perk Property R5 Auto
+
+Perk Property S1 Auto
+Perk Property S2 Auto
+Perk Property S3 Auto
+Perk Property S4 Auto
+Perk Property S5 Auto
+
+Perk Property PG Auto
+Perk Property DE Auto
+Perk Property CO Auto
+
 
 ; sound
 
@@ -135,15 +277,18 @@ DevourmentRegistryScript Property ManagerQuest Auto
 Actor Property NotPlayer Auto
 
 int function GetVersion()
-	return 70
+	return Version.GetValue() as Int
 endFunction
 
 event OnConfigInit()
-	Pages = new string[4]
+	Pages = new string[6]
 	Pages[0] = "Stats"
 	Pages[1] = "Basic"
 	Pages[2] = "Tweaks"
-	Pages[3] = "Perks"
+	Pages[3] = "Predator Perks"
+	Pages[4] = "Prey Perks"
+	Pages[5] = "Toggles"
+	
 
 	notList=new string[5]
 	notList[0]="No"
@@ -162,520 +307,993 @@ event OnConfigInit()
 	fateList[1]="Defecated"
 	fateList[2]="Absorbed, items regurgitated"
 	fateList[3]="Bones"
-endEvent
+EndEvent
 
 event OnVersionUpdate(int a_version)
 	; a_version is the new version, CurrentVersion is the old version
 	if (a_version >= 52 && version.getValue()<52)
 		version.setValue(52)
 		;remove deprecated spells
-		if(game.getPlayer().hasSpell(oldSkillTree))
+		If (game.getPlayer().hasSpell(oldSkillTree))
 			game.getPlayer().removeSpell(oldSkillTree)
-		endif
-		if(game.getPlayer().hasSpell(DevourmentShout))
+		EndIf
+		If (game.getPlayer().hasSpell(DevourmentShout))
 			game.getPlayer().removeShout(DevourmentShout)
-		endif
+		EndIf
 		Game.GetPlayer().enableAI(true)
 		Game.getPlayer().addSpell(deferredAdd,false)
-	endif
+	EndIf
 	if (a_version >= 53 && version.getValue()<53 )
 		version.setValue(53)
-		Pages = new string[4]
+		Pages = new string[6]
 		Pages[0] = "Stats"
 		Pages[1] = "Basic"
 		Pages[2] = "Tweaks"
-		Pages[3] = "Perks"
-	endif
+		Pages[3] = "Predator Perks"
+		Pages[4] = "Prey Perks"
+		Pages[5] = "Toggles"
+	EndIf
 	if (a_version >= 54 && version.getValue()<54 )
 		version.setValue(54)
-		if(Game.getPlayer().getLeveledActorBase().getSex()==1)
+	   
 			Game.getPlayer().addSpell(rapidDigestion)
-		endif
+		
 		dMinGlobal.setValue(2500)
 		dMin=250
-	endif
+	EndIf
 	if (a_version >= 55 && version.getValue()<55 )
 		version.setValue(55)
 		Game.getPlayer().addSpell(rapidDigestionCompanion)
-	endif
-	if(a_version>=70 && version.getValue()<70 && version.getValue()>55)
+	EndIf
+	If (a_version>=70 && version.getValue()<70 && version.getValue()>55)
 		version.setValue(70)
 		ManagerQuest.ZeroPointSevenUpdate()
 		Game.getPlayer().addSpell(Regurgitate)
-	endif
-	if(a_version >=60 && version.getValue()<60)
+	EndIf
+	If (a_version >=60 && version.getValue()<60)
 		version.setValue(60)
 		Game.getPlayer().addSpell(Regurgitate)
-	endif
-endEvent
+	EndIf
+EndEvent
 
 event OnPageReset(string page)
 	Actor player=Game.GetPlayer()
-	if(page=="Basic")
+	If (page=="Basic")
 		UnloadCustomContent()
 		setCursorFillMode(LEFT_TO_RIGHT)
-		NPCpredPos=addMenuOption("NPC predators enabled",NPCpredList[NPCpred])
-		fatePos=addMenuOption("Fate of digested characters",fateList[fate])
-		skillPos=addMenuOption("Skill gain from digested characters",notList[skill])
-		essentialPos=addToggleOption("Digest essential characters",essential)
-		newPlayerPos=addToggleOption("Continue playing after digestion?",newPlayer)
-		raceMenuPos=addToggleOption("Disable racemenu upon character switch?",disableRace)
-		
+		NPCpredPos		= addMenuOption("NPC predators enabled",NPCpredList[NPCpred])
+		fatePos			= addMenuOption("Fate of digested characters",fateList[fate])
+		skillPos		= addMenuOption("Skill gain from digested characters",notList[skill])
+		essentialPos	= AddToggleOption("Digest essential characters",essential)
+		newPlayerPos	= AddToggleOption("Continue playing after digestion?",newPlayer)
+		raceMenuPos		= AddToggleOption("Disable racemenu upon character switch?",disableRace)
+			ToggleVal 	= Debugger.GetValue() as Int
+		DebugJB			= AddToggleOption("Enable Debugging:", ToggleVal)
 		thePage=1
-	elseif(page=="Tweaks")
+		
+	ElseIf (page=="Tweaks")
 		UnloadCustomContent()
 		setCursorFillMode(LEFT_TO_RIGHT)
 		dTimePos=addSliderOption("Digestion time multiplier",dTime,"{1}x")
 		dMinPos=addSliderOption("Body digestion time",dMin,"{0} seconds")
 		sMinPos=addSliderOption("Minimum swallow chance",sMin,"{0} percent")
+		bellyscaleminpos=addSliderOption("Belly Size",bellyscaleint,"{1} Size")
 		NPCbonusPos=addSliderOption("NPC swallow chance multiplier",NPCbonus,"{1}x")
 		weightPos=addSliderOption("Weight gain per NPC digested",weight,"{0} percent")
+		damagemodpos=addSliderOption("Stomach acid damage multiplier",damagemodf,"{1}x")
 		thePage=2
-	elseif(page=="Perks" && Game.GetPlayer().getLeveledActorBase().getSex()==1)
+		
+	ElseIf (page=="Predator Perks" )
 		UnloadCustomContent()
 		setCursorFillMode(TOP_TO_BOTTOM)
-		addHeaderOption("Devourment skill: "+(player.getAV("Variable05")+15) as Int+"        Perk points: "+perkPoints.getValueInt())
-		V1pos=addToggleOption("Voracious I",player.hasPerk(V1)||player.hasPerk(V2)||player.hasPerk(V3)||player.hasPerk(V4)||player.hasPerk(V5))
-		if((!player.hasPerk(V1)&&!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<5)
+		AddHeaderOption(" skill: "+(player.getAV("Variable05")+15) as Int+"		Perk points: "+perkPoints.getValueInt())
+		V1pos=AddToggleOption("Voracious I",player.hasPerk(V1)||player.hasPerk(V2)||player.hasPerk(V3)||player.hasPerk(V4)||player.hasPerk(V5))
+		If ((!player.hasPerk(V1)&&!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<5)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		V2pos=addToggleOption("Voracious II",player.hasPerk(V2)||player.hasPerk(V3)||player.hasPerk(V4)||player.hasPerk(V5),flag)
+		EndIf
+		V2pos=AddToggleOption("Voracious II",player.hasPerk(V2)||player.hasPerk(V3)||player.hasPerk(V4)||player.hasPerk(V5),flag)
 		flag=0
-		if((!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<25)
+		If ((!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<25)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		V3pos=addToggleOption("Voracious III",player.hasPerk(V3)||player.hasPerk(V4)||player.hasPerk(V5),flag)
+		EndIf
+		V3pos=AddToggleOption("Voracious III",player.hasPerk(V3)||player.hasPerk(V4)||player.hasPerk(V5),flag)
 		flag=0
-		if((!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<45)
+		If ((!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<45)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		V4pos=addToggleOption("Voracious IV",player.hasPerk(V4)||player.hasPerk(V5),flag)
+		EndIf
+		V4pos=AddToggleOption("Voracious IV",player.hasPerk(V4)||player.hasPerk(V5),flag)
 		flag=0
-		if((!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<65)
+		If ((!player.hasPerk(V4)&&!player.hasPerk(V5)) || player.getAV("Variable05")<65)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		V5pos=addToggleOption("Voracious V",player.hasPerk(V5),flag)
+		EndIf
+		V5pos=AddToggleOption("Voracious V",player.hasPerk(V5),flag)
 		flag=0
 		setCursorPosition(1)
-		if(player.getAV("Variable05")<10)
+		If (player.getAV("Variable05")<10)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		IS1pos=addToggleOption("Iron Stomach I",player.hasPerk(IS1)||player.hasPerk(IS2)||player.hasPerk(IS3),flag)
-		if((!player.hasPerk(IS1)&&!player.hasPerk(IS2)&&!player.hasPerk(IS3)) || player.getAV("Variable05")<35)
+		EndIf
+		IS1pos=AddToggleOption("Iron Stomach I",player.hasPerk(IS1)||player.hasPerk(IS2)||player.hasPerk(IS3),flag)
+		If ((!player.hasPerk(IS1)&&!player.hasPerk(IS2)&&!player.hasPerk(IS3)) || player.getAV("Variable05")<35)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		IS2pos=addToggleOption("Iron Stomach II",player.hasPerk(IS2)||player.hasPerk(IS3),flag)
+		EndIf
+		IS2pos=AddToggleOption("Iron Stomach II",player.hasPerk(IS2)||player.hasPerk(IS3),flag)
 		flag=0
-		if((!player.hasPerk(IS2)&&!player.hasPerk(IS3)) || player.getAV("Variable05")<60)
+		If ((!player.hasPerk(IS2)&&!player.hasPerk(IS3)) || player.getAV("Variable05")<60)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		IS3pos=addToggleOption("Iron Stomach III",player.hasPerk(IS3),flag)
+		EndIf
+		IS3pos=AddToggleOption("Iron Stomach III",player.hasPerk(IS3),flag)
 		flag=0
-		if(player.getAV("Variable05")<15)
+		If (player.getAV("Variable05")<15)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		SA1pos=addToggleOption("Strong Acid I",player.hasPerk(SA1)||player.hasPerk(SA2)||player.hasPerk(SA3),flag)
+		EndIf
+		SA1pos=AddToggleOption("Strong Acid I",player.hasPerk(SA1)||player.hasPerk(SA2)||player.hasPerk(SA3),flag)
 		flag=0
-		if((!player.hasPerk(SA1)&&!player.hasPerk(SA2)&&!player.hasPerk(SA3)) || player.getAV("Variable05")<45)
+		If ((!player.hasPerk(SA1)&&!player.hasPerk(SA2)&&!player.hasPerk(SA3)) || player.getAV("Variable05")<45)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		SA2pos=addToggleOption("Strong Acid II",player.hasPerk(SA2)||player.hasPerk(SA3),flag)
+		EndIf
+		SA2pos=AddToggleOption("Strong Acid II",player.hasPerk(SA2)||player.hasPerk(SA3),flag)
 		flag=0
-		if((!player.hasPerk(SA2)&&!player.hasPerk(SA3)) || player.getAV("Variable05")<75)
+		If ((!player.hasPerk(SA2)&&!player.hasPerk(SA3)) || player.getAV("Variable05")<75)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		SA3pos=addToggleOption("Strong Acid III",player.hasPerk(SA3),flag)
+		EndIf
+		SA3pos=AddToggleOption("Strong Acid III",player.hasPerk(SA3),flag)
 		flag=0
 		setCursorPosition(12)
-		if(player.getAV("Variable05")<15)
+		If (player.getAV("Variable05")<15)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		SSpos=addToggleOption("Silent Swallow",player.hasPerk(SS),flag)
+		EndIf
+		SSpos=AddToggleOption("Silent Swallow",player.hasPerk(SS),flag)
 		flag=0
-		if(player.getAV("Variable05")<20)
+		If (player.getAV("Variable05")<20)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		N1pos=addToggleOption("Nourishment I",player.hasPerk(N1)||player.hasPerk(N2),flag)
+		EndIf
+		N1pos=AddToggleOption("Nourishment I",player.hasPerk(N1)||player.hasPerk(N2),flag)
 		flag=0
-		if((!player.hasPerk(N1)&&!player.hasPerk(N2)) || player.getAV("Variable05")<30)
+		If ((!player.hasPerk(N1)&&!player.hasPerk(N2)) || player.getAV("Variable05")<30)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		N2pos=addToggleOption("Nourishment II",player.hasPerk(N2),flag)
+		EndIf
+		N2pos=AddToggleOption("Nourishment II",player.hasPerk(N2),flag)
 		flag=0
 		setCursorPosition(13)
-		if(player.getAV("Variable05")<45)
+		If (player.getAV("Variable05")<45)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		CEpos=addToggleOption("Consume Essence",player.hasPerk(CE),flag)
+		EndIf
+		CEpos=AddToggleOption("Consume Essence",player.hasPerk(CE),flag)
 		flag=0
-		if(player.getAV("Variable05")<55)
+		If (player.getAV("Variable05")<55)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		SBpos=addToggleOption("Strong Back",player.hasPerk(SB),flag)
+		EndIf
+		CGpos=AddToggleOption("Constricting Grip",player.hasPerk(CG),flag)
 		flag=0
-		if(player.getAV("Variable05")<85)
+		If (player.getAV("Variable05")<75)
 			flag=OPTION_FLAG_DISABLED
-		endif
-		SFpos=addToggleOption("Soul Food",player.hasPerk(SF),flag)
+		EndIf
+		RDpos=AddToggleOption("Stomach Bound Thralls",player.hasPerk(RD),flag)
+		flag=0
+		If (player.getAV("Variable05")<85)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		SFpos=AddToggleOption("Soul Food",player.hasPerk(SF),flag)
 		flag=0
 		thePage=3
-	elseif(page=="Perks")
+		
+	ElseIf (page=="Perks") ; =====================================================================================================
 		UnloadCustomContent()
-		addHeaderOption("Males do not receive Devourment perks")
+		AddHeaderOption("Males do not receive Devourment perks")
 		thePage=3
-	elseif(page=="Stats" && Game.getPlayer().getLeveledActorBase().getSex()==1)
+		
+	ElseIf (page=="Stats")
 		UnloadCustomContent()
 		int numVictims=(Victims.getValue()+prevPerkPoints.getValue()*(3+0.5*(-1+prevPerkPoints.getValue()))) as int
 		float swallowBonus=15+Player.getAV("Variable05")+Player.getAV("FavorActive")
-		if(Player.hasPerk(V5))
+		If (Player.hasPerk(V5))
 			swallowBonus*=2
-		elseif(Player.hasPerk(V4))
+		ElseIf (Player.hasPerk(V4))
 			swallowBonus*=1.8
-		elseif(Player.hasPerk(V3))
+		ElseIf (Player.hasPerk(V3))
 			swallowBonus*=1.6
-		elseif(Player.hasPerk(V2))
+		ElseIf (Player.hasPerk(V2))
 			swallowBonus*=1.4
-		elseif(Player.hasPerk(V1))
+		ElseIf (Player.hasPerk(V1))
 			swallowBonus*=1.2
-		endif
-		float Damage=ManagerQuest.getDigestionDamage(Player, NotPlayer)
-		float MaxTime=ManagerQuest.getDigestionTime(Player)
+		EndIf
+		float Damage = ManagerQuest.getDigestionDamage(Player, NotPlayer)
+		float MaxTime = ManagerQuest.getDigestionTime(Player)
+		float StruggleDamage = ManagerQuest.getstrugglingdamage(Player, Notplayer)
+		int acidresistance = ManagerQuest.getAcidResistance(Player, Notplayer)
+		float swallowresistance = (15+Player.getAV("Variable05")+Player.getAV("FavorPointsBonus"))
+		If (player.hasperk(S1))
+			swallowresistance *= 1.1
+		ElseIf (player.hasperk(S2))
+			swallowresistance *= 1.2
+		ElseIf (player.hasperk(S3))
+			swallowresistance *= 1.3
+		ElseIf (player.hasperk(S4))
+			swallowresistance *= 1.4
+		ElseIf (player.hasperk(S5))
+			swallowresistance *= 1.5
+		EndIf
 		
 		setCursorFillMode(TOP_TO_BOTTOM)
-		addHeaderOption("Devourment v0.70")	
-		addHeaderOption("Statistics")
-		addTextOption("Devourment skill: ",""+(Player.getAV("Variable05")+15) as Int)
-		addTextOption("Devourment perk points: ",""+PerkPoints.getValue() as Int)
-		addEmptyOption()
-		addTextOption("Swallow bonus: ",""+swallowBonus as Int)
-		addTextOption("Swallow resistance: ",""+(15+Player.getAV("Variable05")+Player.getAV("FavorPointsBonus")) as Int)
-		addTextOption("Stomach damage/sec: ",""+Damage as Int)
-		addTextOption("Digestion duration: ",""+maxTime as Int)
-		addTextOption("Acid resistance: ",""+Player.getAV("FavorsPerDay") as Int)
+		AddHeaderOption("Devourment v"+GetVersion()) 
+		AddHeaderOption("Statistics")
+		AddTextOption("Devourment skill: ",""+(Player.getAV("Variable05")+15) as Int)
+		AddTextOption("Devourment perk points: ",""+PerkPoints.getValue() as Int)
+		AddEmptyOption()
+		AddTextOption("Swallow bonus: ",""+swallowBonus as Int)
+		AddTextOption("Swallow resistance: ",swallowresistance as Int)
+		AddTextOption("Stomach damage/sec: ",""+Damage as Int)
+		AddTextOption("Struggling damage: ",""+StruggleDamage as Int)
+		AddTextOption("Digestion duration: ",""+maxTime as Int)
+		AddTextOption("Acid resistance: ",acidresistance+"%" as int)
 		setCursorPosition(1)
-		addHeaderOption("Total victims digested: "+numVictims)
-		addTextOption("Altmer digested: ",""+altD.getValueInt())
-		addTextOption("Argonians digested: ",""+argD.getValueInt())
-		addTextOption("Bosmer digested: ",""+bosD.getValueInt())
-		addTextOption("Bretons digested: ",""+breD.getValueInt())
-		addTextOption("Dunmer digested: ",""+dunD.getValueInt())
-		addTextOption("Imperials digested: ",""+impD.getValueInt())
-		addTextOption("Khajiit digested: ",""+khaD.getValueInt())
-		addTextOption("Nords digested: ",""+norD.getValueInt())
-		addTextOption("Orsimer digested: ",""+orsD.getValueInt())
-		addTextOption("Redguards digested: ",""+redD.getValueInt())
-		addTextOption("Previous Dovahkiins digested: ",""+prevDov.getValueInt())
-		if(prevDov.getValueInt()>0)
-			addTextOption("Last Dovahkiin digested: ",NameQuest.lastName)
-		endif
-
+		AddHeaderOption("Total victims digested: "+numVictims)
+		AddTextOption("Women digested: ",""+_WomenEaten.getValueInt())
+		AddTextOption("Men digested: ",""+_MenEaten.getValueInt())
+		AddTextOption("Altmer digested: ",""+altD.getValueInt())
+		AddTextOption("Argonians digested: ",""+argD.getValueInt())
+		AddTextOption("Bosmer digested: ",""+bosD.getValueInt())
+		AddTextOption("Bretons digested: ",""+breD.getValueInt())
+		AddTextOption("Dunmer digested: ",""+dunD.getValueInt())
+		AddTextOption("Imperials digested: ",""+impD.getValueInt())
+		AddTextOption("Khajiit digested: ",""+khaD.getValueInt())
+		AddTextOption("Nords digested: ",""+norD.getValueInt())
+		AddTextOption("Orsimer digested: ",""+orsD.getValueInt())
+		AddTextOption("Redguards digested: ",""+redD.getValueInt())
+		AddTextOption("Dragons digested: ",""+_DragonEaten.getValueInt())
+		AddTextOption("Horses digested: ",""+_HorseEaten.getValueInt())
+		AddTextOption("Trolls digested: ",""+_TrollEaten.getValueInt())
+		AddTextOption("Draugrs digested: ",""+_DraugrEaten.getValueInt())
+		AddTextOption("Falmer digested: ",""+_FalmerEaten.getValueInt())
+		AddTextOption("Foxes digested: ",""+_FoxEaten.getValueInt())
+		AddTextOption("Slaughterfish digested: ",""+_FishEaten.getValueInt())
+		AddTextOption("Bears digested: ",""+_BearEaten.getValueInt())
+		AddTextOption("Mudcrabs digested: ",""+_MudcrabEaten.getValueInt())
+		AddTextOption("Spiders digested: ",""+_SpiderEaten.getValueInt())
+		AddTextOption("Chickens digested: ",""+_ChickenEaten.getValueInt())
+		AddTextOption("Dogs digested: ",""+_DogEaten.getValueInt())
+		AddTextOption("Deers digested: ",""+_DeerEaten.getValueInt())
+		AddTextOption("Goats digested: ",""+_GoatEaten.getValueInt())
+		AddTextOption("Cows digested: ",""+_CowEaten.getValueInt())
+		AddTextOption("Chaurus digested: ",""+_ChaurusEaten.getValueInt())
+		AddTextOption("Giants digested: ",""+_GiantEaten.getValueInt())
+		AddTextOption("Dwarven Machines digested: ",""+_DwarvenMachineEaten.getValueInt())
+		AddTextOption("Hagravens digested: ",""+_HagravenEaten.getValueInt())
+		AddTextOption("Mammoths digested: ",""+_MammothEaten.getValueInt())
+		AddTextOption("Sabrecats digested: ",""+_SabrecatEaten.getValueInt())
+		AddTextOption("Werewolves digested: ",""+_WerewolfEaten.getValueInt())
+		AddTextOption("Wolves digested: ",""+_WolfEaten.getValueInt())
+		AddTextOption("Dragon Priests digested: ",""+_DragonPriestEaten.getValueInt())
+		AddTextOption("Dremora digested: ",""+_DremoraEaten.getValueInt())
+		AddTextOption("Hares digested: ",""+_HareEaten.getValueInt())
+		AddTextOption("Horkers digested: ",""+_HorkerEaten.getValueInt())
+		AddTextOption("Vampires digested: ",""+_VampireEaten.getValueInt())	   
+		AddTextOption("Previous Dovahkiins digested: ",""+prevDov.getValueInt())
+		If (prevDov.getValueInt()>0)
+			AddTextOption("Last Dovahkiin digested: ",NameQuest.lastName)
+		EndIf
 		thePage=4
-	elseif(page=="Stats")
+		
+	ElseIf (page=="Toggles")
 		UnloadCustomContent()
-		addHeaderOption("Devourment v0.55")	
-		addTextOption("Swallow resistance: ",""+(15+Player.getAV("Variable05")+Player.getAV("FavorPointsBonus")) as Int)
-		addTextOption("Acid resistance: ",""+Player.getAV("FavorsPerDay") as Int)
+	fempredpos			= AddToggleOption("Female predators",fempredbool)
+	malepredpos			= AddToggleOption("Male predators",malepredbool)
+	multipreypos		= AddToggleOption("Player multiprey",multipreybool )
+	multipreynpcpos		= AddToggleOption("Npc multiprey",multipreynpcbool )
+	animalpredpos		= AddToggleOption("Animal predators",animalpredbool )
+	strugglepos			= AddToggleOption("Struggle Mechanic",strugglebool)
+	shititemspos		= AddToggleOption("Prey's gear shown when disposed",shititemsbool)
+	breastvorepos		= AddToggleOption("Breast Vore",breastvorebool)
+	Cockvorepos			= AddToggleOption("Cock Vore",cockvorebool)
+	noescapepos			= AddToggleOption("No escape once swallowed",noescapebool)
+	strippos			= AddToggleOption("Player Strips in Stomach",stripbool)
+	loadscreenpos		= AddToggleOption("Loading screens",loadscreenbool)
+	playercentricpos	= AddToggleOption("Player Centric",playercentricbool)
+	unwillingaudiopos	= AddToggleOption("Unwilling Struggling Sounds",unwillingaudiobool)
+	ScatMoanspos		= AddToggleOption("Scat Sounds",ScatMoansbool)
+	MorphOnlypos		= AddToggleOption("Only Morphs",MorphOnlybool)
+	thePage=5
+	
+	ElseIf (page=="Prey perks")
+	  UnloadCustomContent()
+		setCursorFillMode(TOP_TO_BOTTOM)
+		AddHeaderOption("Devourment skill: "+(player.getAV("Variable05")+15) as Int+"		Perk points: "+perkPoints.getValueInt())
+	   
+		;; Resilience perks
+		R1pos=AddToggleOption("Resilience I",player.hasPerk(R1)||player.hasPerk(R2)||player.hasPerk(R3)||player.hasPerk(R4)||player.hasPerk(R5))
+		If ((!player.hasPerk(R1)&&!player.hasPerk(R2)&&!player.hasPerk(R3)&&!player.hasPerk(R4)&&!player.hasPerk(R5)) || player.getAV("Variable05")<5)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		R2pos=AddToggleOption("Resilience II",player.hasPerk(R2)||player.hasPerk(R3)||player.hasPerk(R4)||player.hasPerk(R5),flag)
+		flag=0
+		If ((!player.hasPerk(R2)&&!player.hasPerk(R3)&&!player.hasPerk(R4)&&!player.hasPerk(R5)) || player.getAV("Variable05")<25)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		R3pos=AddToggleOption("Resilience III",player.hasPerk(R3)||player.hasPerk(R4)||player.hasPerk(R5),flag)
+		flag=0
+		If ((!player.hasPerk(R3)&&!player.hasPerk(R4)&&!player.hasPerk(R5)) || player.getAV("Variable05")<45)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		R4pos=AddToggleOption("Resilience IV",player.hasPerk(R4)||player.hasPerk(R5),flag)
+		flag=0
+		If ((!player.hasPerk(R4)&&!player.hasPerk(R5)) || player.getAV("Variable05")<65)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		R5pos=AddToggleOption("Resilience V",player.hasPerk(R5),flag)
+		flag=0
+		setCursorPosition(1)
+		;; Slippery perks
+		S1pos=AddToggleOption("Slippery I",player.hasPerk(S1)||player.hasPerk(S2)||player.hasPerk(S3)||player.hasPerk(S4)||player.hasPerk(S5))
+		If ((!player.hasPerk(S1)&&!player.hasPerk(S2)&&!player.hasPerk(S3)&&!player.hasPerk(S4)&&!player.hasPerk(S5)) || player.getAV("Variable05")<5)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		S2pos=AddToggleOption("Slippery II",player.hasPerk(S2)||player.hasPerk(S3)||player.hasPerk(S4)||player.hasPerk(S5),flag)
+		flag=0
+		If ((!player.hasPerk(S2)&&!player.hasPerk(S3)&&!player.hasPerk(S4)&&!player.hasPerk(S5)) || player.getAV("Variable05")<25)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		S3pos=AddToggleOption("Slippery III",player.hasPerk(S3)||player.hasPerk(S4)||player.hasPerk(S5),flag)
+		flag=0
+		If ((!player.hasPerk(S3)&&!player.hasPerk(S4)&&!player.hasPerk(S5)) || player.getAV("Variable05")<45)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		S4pos=AddToggleOption("Slippery IV",player.hasPerk(S4)||player.hasPerk(S5),flag)
+		flag=0
+		If ((!player.hasPerk(S4)&&!player.hasPerk(S5)) || player.getAV("Variable05")<65)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		S5pos=AddToggleOption("Slippery V",player.hasPerk(S5),flag)
+		flag=0	   
+		If (player.getAV("Variable05")<80)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		
+		
+		
+		 PGpos=AddToggleOption("Parting Gift",player.hasPerk(PG),flag)
+		flag=0
+		If (player.getAV("Variable05")<35)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		 DEpos=AddToggleOption("Delicious",player.hasPerk(DE),flag)
+		flag=0
+		If (player.getAV("Variable05")<10)
+			flag=OPTION_FLAG_DISABLED
+		EndIf		
+		COpos=AddToggleOption("Comfy",player.hasPerk(CO),flag)
+		flag=0
+		If (player.getAV("Variable05")<10)
+			flag=OPTION_FLAG_DISABLED
+		EndIf
+		
+		
+		setCursorPosition(1)			  
+		If (player.getAV("Variable05")<10)
+			flag=OPTION_FLAG_DISABLED
+		EndIf		 
+		thePage=4
+	ElseIf (page=="Stats")
+		UnloadCustomContent()
+		AddHeaderOption("Devourment v0.55") 
+		AddTextOption("Swallow resistance: ",""+(15+Player.getAV("Variable05")+Player.getAV("FavorPointsBonus")) as Int)
+		AddTextOption("Acid resistance: ",""+Player.getAV("FavorsPerDay") as Int)
 		thePage=4
 	else
 		LoadCustomContent("Devourment.dds",-9)
 		thePage=0
-	endif
-endEvent
+	EndIf
+EndEvent
 
 event OnOptionSelect(int option)
-if(thePage==1)
-	if(option==essentialPos)
-		if(essential==true)
+If (thePage==1)
+	If (Option == essentialPos)
+		If (essential==true)
 			essentialGlobal.setValue(0)
 		else
 			essentialGlobal.setValue(1)
-		endif
+		EndIf
 		essential=essentialGlobal.getValueInt() as Bool
 		setToggleOptionValue(essentialPos, essential)
-	elseif(option==newPlayerPos)
-		if(newPlayer==true)
+	ElseIf (Option == newPlayerPos)
+		If (newPlayer==true)
 			newPlayerGlobal.setValue(0)
 		else
 			newPlayerGlobal.setValue(1)
-		endif
+		EndIf
 		newPlayer=newPlayerGlobal.getValueInt() as Bool
 		setToggleOptionValue(newPlayerPos,newPlayer)
-	elseif(option==raceMenuPos)
-		if(disableRace==true)
+	ElseIf (Option == raceMenuPos)
+		If (disableRace==true)
 			disableRaceGlobal.setValue(0)
 		else
 			disableRaceGlobal.setValue(1)
-		endif
+		EndIf
 		disableRace=disableRaceGlobal.getValueInt() as Bool
 		setToggleOptionValue(raceMenuPos,disableRace)
-	endif
-elseif(thePage==3&&perkPoints.getValueInt()>0)
+	ElseIf (Option == DebugJB)
+		If Debugger.GetValue() == 0
+			SetToggleOptionValue(DebugJB, True)
+			Debugger.SetValue(1)
+		Else
+			SetToggleOptionValue(DebugJB, False)
+			Debugger.SetValue(0)
+		EndIf
+	EndIf
+ElseIf (thePage==5)
+	If (Option == fempredpos)
+		If (fempredbool==true)
+			fempred.setValue(0)
+		else
+			fempred.setValue(1)
+		EndIf
+		fempredbool=fempred.getValueInt() as Bool
+		setToggleOptionValue(fempredpos,fempredbool)   
+  
+	ElseIf (Option == malepredpos)
+		If (malepredbool==true)
+			malepred.setValue(0)
+		else
+			malepred.setValue(1)
+		EndIf
+		malepredbool=malepred.getValueInt() as Bool
+		setToggleOptionValue(malepredpos,malepredbool)
+	ElseIf (Option == multipreypos)
+		If (multipreybool==true)
+			multiprey.setValue(0)
+		else
+			multiprey.setValue(1)
+		EndIf
+		multipreybool=multiprey.getValueInt() as Bool
+		setToggleOptionValue(multipreypos,multipreybool)
+	ElseIf (Option == multipreynpcpos)
+		If (multipreynpcbool==true)
+			multipreynpc.setValue(0)
+		else
+			multipreynpc.setValue(1)
+		EndIf
+		multipreynpcbool=multipreynpc.getValueInt() as Bool
+		setToggleOptionValue(multipreynpcpos,multipreynpcbool)
+	ElseIf (Option == animalpredpos)
+		If (animalpredbool==true)
+			animalpred.setValue(0)
+		else
+			animalpred.setValue(1)
+		EndIf
+		animalpredbool=animalpred.getValueInt() as Bool
+		setToggleOptionValue(animalpredpos,animalpredbool)
+	ElseIf (Option == StrugglePos)
+		If (Strugglebool==true)
+			Struggle.setValue(0)
+		else
+			Struggle.setValue(1)
+		EndIf
+		Strugglebool=Struggle.getValueInt() as Bool
+		setToggleOptionValue(StrugglePos, Strugglebool)
+	ElseIf (Option == ShititemsPos)
+		If (Shititemsbool==true)
+			Shititems.setValue(0)
+		else
+			Shititems.setValue(1)
+		EndIf
+		Shititemsbool=Shititems.getValueInt() as Bool
+		setToggleOptionValue(ShititemsPos, Shititemsbool)
+	ElseIf (Option == breastvorePos)
+		If (breastvorebool==true)
+			breastvore.setValue(0)
+		else
+			breastvore.setValue(1)
+		EndIf
+		breastvorebool=breastvore.getValueInt() as Bool
+		setToggleOptionValue(breastvorePos, breastvorebool)
+	ElseIf (Option == cockvorePos)
+		If (cockvorebool==true)
+			cockvore.setValue(0)
+		else
+			cockvore.setValue(1)
+		EndIf
+		cockvorebool=cockvore.getValueInt() as Bool
+		setToggleOptionValue(cockvorePos, cockvorebool)
+	ElseIf (Option == morphanimPos)
+		If (morphanimbool==true)
+			morphanim.setValue(0)
+		else
+			morphanim.setValue(1)
+		EndIf
+		morphanimbool= morphanim.getValueInt() as Bool
+		setToggleOptionValue(morphanimPos, morphanimbool)
+	ElseIf (Option == NoescapePos)
+		If (Noescapebool==true)
+			Noescape.setValue(0)
+		else
+			Noescape.setValue(1)
+		EndIf
+		Noescapebool=Noescape.getValueInt() as Bool
+		setToggleOptionValue(NoescapePos, Noescapebool)
+	ElseIf (Option == stripPos)
+		If (stripbool==true)
+			strip.setValue(0)
+		else
+			strip.setValue(1)
+		EndIf
+		stripbool=strip.getValueInt() as Bool
+		setToggleOptionValue(stripPos, stripbool)
+	ElseIf (Option == loadscreenPos)
+		If (loadscreenbool==true)
+			loadscreen.setValue(0)
+		else
+			loadscreen.setValue(1)
+		EndIf
+		loadscreenbool=loadscreen.getValueInt() as Bool
+		setToggleOptionValue(loadscreenPos, loadscreenbool)
+	ElseIf (Option == playercentricPos)
+		If (playercentricbool==true)
+			playercentric.setValue(0)
+		else
+			playercentric.setValue(1)
+		EndIf
+		playercentricbool=playercentric.getValueInt() as Bool
+		setToggleOptionValue(playercentricPos, playercentricbool)
+	ElseIf (Option == unwillingaudioPos)
+		If (unwillingaudiobool==true)
+			unwillingaudio.setValue(0)
+		else
+			unwillingaudio.setValue(1)
+		EndIf
+		unwillingaudiobool=unwillingaudio.getValueInt() as Bool
+		setToggleOptionValue(unwillingaudioPos, unwillingaudiobool)
+	ElseIf (Option == ScatMoansPos)
+		If (ScatMoansbool==true)
+			ScatMoans.setValue(0)
+		else
+			ScatMoans.setValue(1)
+		EndIf
+		ScatMoansbool=ScatMoans.getValueInt() as Bool
+		setToggleOptionValue(ScatMoansPos, ScatMoansbool)
+	ElseIf (Option == morphonlyPos)
+		If (morphonlybool==true)
+			morphonly.setValue(0)
+		else
+			morphonly.setValue(1)
+		EndIf
+		morphonlybool=morphonly.getValueInt() as Bool
+		setToggleOptionValue(morphonlyPos, morphonlybool)
+	
+   
+	EndIf
+ElseIf (thePage==4&&perkPoints.getValueInt()>0)
 	Actor Player=Game.GetPlayer()
 	bool perked=false
-	if(option==V1Pos&&!player.hasPerk(V1)&&!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5))
-		player.addPerk(V1)
+	If (Option == SD1Pos&&!player.hasPerk(SD1)&&!player.hasPerk(SD2)&&!player.hasPerk(SD3)&&!player.hasPerk(SD4)&&!player.hasPerk(SD5))
+		player.addPerk(SD1)
 		perked=true
-	elseif(option==V2Pos&&!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5))
-		player.removePerk(V1)
-		player.addPerk(V2)
+	ElseIf (Option == SD2Pos&&!player.hasPerk(SD2)&&!player.hasPerk(SD3)&&!player.hasPerk(SD4)&&!player.hasPerk(SD5))
+		player.removePerk(SD1)
+		player.addPerk(SD2)
 		perked=true
-	elseif(option==V3Pos&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5))
-		player.removePerk(V2)
-		player.addPerk(V3)
+	ElseIf (Option == SD3Pos&&!player.hasPerk(SD3)&&!player.hasPerk(SD4)&&!player.hasPerk(SD5))
+		player.removePerk(SD2)
+		player.addPerk(SD3)
 		perked=true
-	elseif(option==V4Pos&&!player.hasPerk(V4)&&!player.hasPerk(V5))
-		player.removePerk(V3)
-		player.addPerk(V4)
+	ElseIf (Option == SD4Pos&&!player.hasPerk(SD4)&&!player.hasPerk(SD5))
+		player.removePerk(SD3)
+		player.addPerk(SD4)
 		perked=true
-	elseif(option==V5pos&&!player.hasPerk(V5))
-		player.removePerk(V4)
-		player.addPerk(V5)
+	ElseIf (Option == SD5pos&&!player.hasPerk(SD5))
+		player.removePerk(SD4)
+		player.addPerk(SD5)
 		perked=true
-	elseif(option==IS1Pos&&!player.hasPerk(IS1)&&!player.hasPerk(IS2)&&!player.hasPerk(IS3))
-		player.addPerk(IS1)
+	EndIf
+	
+	If (Option == R1Pos&&!player.hasPerk(R1)&&!player.hasPerk(R2)&&!player.hasPerk(R3)&&!player.hasPerk(R4)&&!player.hasPerk(R5))
+		player.addPerk(R1)
 		perked=true
-	elseif(option==IS2Pos&&!player.hasPerk(IS2)&&!player.hasPerk(IS3))
-		player.removePerk(IS1)
-		player.addPerk(IS2)
+	ElseIf (Option == R2Pos&&!player.hasPerk(R2)&&!player.hasPerk(R3)&&!player.hasPerk(R4)&&!player.hasPerk(R5))
+		player.removePerk(R1)
+		player.addPerk(R2)
 		perked=true
-	elseif(option==IS3Pos&&!player.hasPerk(IS3))
-		player.removePerk(IS2)
-		player.addPerk(IS3)
+	ElseIf (Option == R3Pos&&!player.hasPerk(R3)&&!player.hasPerk(R4)&&!player.hasPerk(R5))
+		player.removePerk(R2)
+		player.addPerk(R3)
 		perked=true
-	elseif(option==SA1Pos&&!player.hasPerk(SA1)&&!player.hasPerk(SA2)&&!player.hasPerk(SA3))
-		player.addPerk(SA1)
+	ElseIf (Option == R4Pos&&!player.hasPerk(R4)&&!player.hasPerk(R5))
+		player.removePerk(R3)
+		player.addPerk(R4)
 		perked=true
-	elseif(option==SA2Pos&&!player.hasPerk(SA2)&&!player.hasPerk(SA3))
-		player.removePerk(SA1)
-		player.addPerk(SA2)
+	ElseIf (Option == R5pos&&!player.hasPerk(R5))
+		player.removePerk(R4)
+		player.addPerk(R5)
 		perked=true
-	elseif(option==SA3Pos&&!player.hasPerk(SA3))
-		player.removePerk(SA2)
-		player.addPerk(SA3)
+	EndIf
+	
+	 If (Option == S1Pos&&!player.hasPerk(S1)&&!player.hasPerk(S2)&&!player.hasPerk(S3)&&!player.hasPerk(S4)&&!player.hasPerk(S5))
+		 player.addPerk(S1)
 		perked=true
-	elseif(option==N1Pos&&!player.hasPerk(N1)&&!player.hasPerk(N2))
-		player.addPerk(N1)
+	ElseIf (Option == S2Pos&&!player.hasPerk(S2)&&!player.hasPerk(S3)&&!player.hasPerk(S4)&&!player.hasPerk(S5))
+		player.removePerk(S1)
+		player.addPerk(S2)
 		perked=true
-	elseif(option==N2Pos&&!player.hasPerk(N2))
-		player.removePerk(N1)
-		player.addPerk(N2)
+	ElseIf (Option == S3Pos&&!player.hasPerk(S3)&&!player.hasPerk(S4)&&!player.hasPerk(S5))
+		player.removePerk(S2)
+		player.addPerk(S3)
 		perked=true
-	elseif(option==SSpos&&!player.hasPerk(SS))
-		player.addPerk(SS)
+	ElseIf (Option == S4Pos&&!player.hasPerk(S4)&&!player.hasPerk(S5))
+		player.removePerk(S3)
+		player.addPerk(S4)
 		perked=true
-	elseif(option==SBPos&&!player.hasPerk(SB))
-		player.addPerk(SB)
+	ElseIf (Option == S5pos&&!player.hasPerk(S5))
+		player.removePerk(S4)
+		player.addPerk(S5)
 		perked=true
-	elseif(option==SFPos&&!player.hasPerk(SF))
-		player.addPerk(SF)
+	ElseIf (Option == PGPos&&!player.hasPerk(PG))
+		player.addPerk(PG)
 		perked=true
-	elseif(option==CEPos&&!player.hasPerk(CE))
-		player.addPerk(CE)
+	ElseIf (Option == DEPos&&!player.hasPerk(DE))
+		player.addPerk(DE)
+		perked=True
+	ElseIf (Option == COPos&&!player.hasPerk(CO))
+		player.addPerk(CO)
 		perked=true
-	endif
-
-	if(perked)
+	EndIf
+	
+	If (perked)
 		perkPoints.setValue(-1+perkPoints.getValue())
 		perkSound.play(player)
 		forcepagereset()
-	endif
-endif
-endEvent
+	EndIf
+
+ElseIf (thePage==3&&perkPoints.getValueInt()>0)
+	Actor Player=Game.GetPlayer()
+	bool perked=false
+	If (Option == V1Pos&&!player.hasPerk(V1)&&!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5))
+		player.addPerk(V1)
+		perked=true
+	ElseIf (Option == V2Pos&&!player.hasPerk(V2)&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5))
+		player.removePerk(V1)
+		player.addPerk(V2)
+		perked=true
+	ElseIf (Option == V3Pos&&!player.hasPerk(V3)&&!player.hasPerk(V4)&&!player.hasPerk(V5))
+		player.removePerk(V2)
+		player.addPerk(V3)
+		perked=true
+	ElseIf (Option == V4Pos&&!player.hasPerk(V4)&&!player.hasPerk(V5))
+		player.removePerk(V3)
+		player.addPerk(V4)
+		perked=true
+	ElseIf (Option == V5pos&&!player.hasPerk(V5))
+		player.removePerk(V4)
+		player.addPerk(V5)
+		perked=true
+	ElseIf (Option == IS1Pos&&!player.hasPerk(IS1)&&!player.hasPerk(IS2)&&!player.hasPerk(IS3))
+		player.addPerk(IS1)
+		perked=true
+	ElseIf (Option == IS2Pos&&!player.hasPerk(IS2)&&!player.hasPerk(IS3))
+		player.removePerk(IS1)
+		player.addPerk(IS2)
+		perked=true
+	ElseIf (Option == IS3Pos&&!player.hasPerk(IS3))
+		player.removePerk(IS2)
+		player.addPerk(IS3)
+		perked=true
+	ElseIf (Option == SA1Pos&&!player.hasPerk(SA1)&&!player.hasPerk(SA2)&&!player.hasPerk(SA3))
+		player.addPerk(SA1)
+		perked=true
+	ElseIf (Option == SA2Pos&&!player.hasPerk(SA2)&&!player.hasPerk(SA3))
+		player.removePerk(SA1)
+		player.addPerk(SA2)
+		perked=true
+	ElseIf (Option == SA3Pos&&!player.hasPerk(SA3))
+		player.removePerk(SA2)
+		player.addPerk(SA3)
+		perked=true
+	ElseIf (Option == N1Pos&&!player.hasPerk(N1)&&!player.hasPerk(N2))
+		player.addPerk(N1)
+		perked=true
+	ElseIf (Option == N2Pos&&!player.hasPerk(N2))
+		player.removePerk(N1)
+		player.addPerk(N2)
+		perked=true
+	ElseIf (Option == SSpos&&!player.hasPerk(SS))
+		player.addPerk(SS)
+		perked=true
+	ElseIf (Option == SFPos&&!player.hasPerk(SF))
+		player.addPerk(SF)
+		perked=true
+	ElseIf (Option == CGPos&&!player.hasPerk(CG))
+		player.addPerk(CG)
+		perked=true
+	ElseIf (Option == RDPos&&!player.hasPerk(RD))
+		player.addPerk(RD)
+		perked=true
+	ElseIf (Option == CEPos&&!player.hasPerk(CE))
+		player.addPerk(CE)
+		perked=true
+	EndIf
+
+	If (perked)
+		perkPoints.setValue(-1+perkPoints.getValue())
+		perkSound.play(player)
+		forcepagereset()
+	EndIf
+
+
+EndIf
+EndEvent
 
 event OnOptionSliderOpen(int option)
 	if (option == dTimePos)
-            SetSliderDialogStartValue(dTime)
-            SetSliderDialogDefaultValue(1.0)
-            SetSliderDialogRange(0.5, 5.0)
-            SetSliderDialogInterval(0.1)
-	elseif (option==dMinPos)
+			SetSliderDialogStartValue(dTime)
+			SetSliderDialogDefaultValue(1.0)
+			SetSliderDialogRange(0.1, 10.0)
+			SetSliderDialogInterval(0.1)
+	ElseIf (Option == dMinPos)
 		SetSliderDialogStartValue(dMin)
-            SetSliderDialogDefaultValue(250.0)
-            SetSliderDialogRange(250.0, 1200.0)
-            SetSliderDialogInterval(10.0)
-	elseif (option==sMinPos)
+			SetSliderDialogDefaultValue(250.0)
+			SetSliderDialogRange(10.0, 10000.0)
+			SetSliderDialogInterval(10.0)
+	ElseIf (Option == sMinPos)
 		SetSliderDialogStartValue(sMin)
-            SetSliderDialogDefaultValue(5.0)
-            SetSliderDialogRange(1.0, 20.0)
-            SetSliderDialogInterval(1.0)
-	elseif (option==NPCbonusPos)
+			SetSliderDialogDefaultValue(5.0)
+			SetSliderDialogRange(1.0, 100)
+			SetSliderDialogInterval(1.0)
+	ElseIf (Option == NPCbonusPos)
 		SetSliderDialogStartValue(NPCbonus)
-            SetSliderDialogDefaultValue(1.0)
-            SetSliderDialogRange(0.5, 3.0)
-            SetSliderDialogInterval(0.1)
-	elseif (option==weightPos)
+			SetSliderDialogDefaultValue(1.0)
+			SetSliderDialogRange(0.1, 10)
+			SetSliderDialogInterval(0.1)
+	ElseIf (Option == weightPos)
 		SetSliderDialogStartValue(weight)
-            SetSliderDialogDefaultValue(2.0)
-            SetSliderDialogRange(0.0, 20.0)
-            SetSliderDialogInterval(1.0)
-      endif
-endEvent
+			SetSliderDialogDefaultValue(2.0)
+			SetSliderDialogRange(0.0, 100)
+			SetSliderDialogInterval(1.0)
+		ElseIf (Option == bellyscaleminpos)
+			SetSliderDialogStartValue(bellyscaleint)
+			SetSliderDialogDefaultValue(1)
+			SetSliderDialogRange(0.0, 10)
+			SetSliderDialogInterval(0.1)
+		ElseIf (Option == damagemodPos)
+			SetSliderDialogStartValue(damagemodf)
+		SetSliderDialogDefaultValue(1.0)
+		SetSliderDialogRange(0.1, 20)
+		SetSliderDialogInterval(0.1)			
+	  EndIf
+EndEvent
 
 event OnOptionSliderAccept(int option, float value)
-	if(option==dTimePos)
+	If (Option == dTimePos)
 		dTimeGlobal.setValue(value)
 		dTime=dTimeGlobal.getValue()
 		setSliderOptionValue(option, dTime, "{1}x")
-	elseif(option==dMinPos)
-		dMinGlobal.setValue(value*10)
-		dMin=dMinGlobal.getValueInt()/10
+	ElseIf (Option == dMinPos)
+		dMinGlobal.setValue(value)
+		dMin=dMinGlobal.getValueInt()
 		setSliderOptionValue(option, dMin, "{0} seconds")
-	elseif(option==sMinPos)
+	ElseIf (Option == sMinPos)
 		sMinGlobal.setValue(value)
 		sMin=sMinGlobal.getValueInt()
 		setSliderOptionValue(option, sMin, "{0} percent")
-	elseif(option==NPCbonusPos)
+	 ElseIf (Option == bellyscaleminpos)
+		_bellyscale.setValue(value)
+		bellyscaleint=_bellyscale.getValue()
+		setSliderOptionValue(option, bellyscaleint, "{1}x")
+	ElseIf (Option == NPCbonusPos)
 		NPCbonusGlobal.setValue(value)
 		NPCbonus=NPCbonusGlobal.getValue()
 		setSliderOptionValue(option, NPCbonus, "{1}x")
-	elseif(option==weightPos)
+	ElseIf (Option == weightPos)
 		weightGlobal.setValue(value)
 		weight=weightGlobal.getValueInt()
 		setSliderOptionValue(option, weight, "{0} percent")
-	endif
-endEvent
+	ElseIf (Option == damagemodPos)
+		damagemod.setValue(value)
+		damagemodf=damagemod.getValue()
+		setSliderOptionValue(option, damagemodf, "{1}x")
+	EndIf
+EndEvent
 
 event OnOptionMenuOpen(int option)
-       if (option == NPCpredPos)
-             SetMenuDialogOptions(NPCpredList)
-             SetMenuDialogStartIndex(NPCpred)
-             SetMenuDialogDefaultIndex(1)
-	elseif (option==fatePos)
+	   if (option == NPCpredPos)
+			 SetMenuDialogOptions(NPCpredList)
+			 SetMenuDialogStartIndex(NPCpred)
+			 SetMenuDialogDefaultIndex(1)
+	ElseIf (Option == fatePos)
 		SetMenuDialogOptions(fateList)
 		SetMenuDialogStartIndex(fate)
 		SetMenuDialogDefaultIndex(1)
-	elseif (option==skillPos)
+	ElseIf (Option == skillPos)
 		SetMenuDialogOptions(notList)
 		SetMenuDialogStartIndex(skill)
 		SetMenuDialogDefaultIndex(4)
-      endIf
-endEvent
+	  EndIf
+EndEvent
 
 event OnOptionMenuAccept(int option, int index)
 	if (option == NPCpredPos)
 		NPCpredGlobal.setValue(index)
 		NPCpred=NPCpredGlobal.getValueInt()
 		setMenuOptionValue(option, NPCpredList[NPCpred])
-	elseif (option == fatePos)
+	ElseIf (option == fatePos)
 		fateGlobal.setValue(index)
 		fate=fateGlobal.getValueInt()
 		setMenuOptionValue(option, fateList[fate])
-	elseif (option == skillPos)
+	ElseIf (option == skillPos)
 		skillGlobal.setValue(index)
 		skill=skillGlobal.getValueInt()
 		setMenuOptionValue(option, notList[skill])
-	endif
-endEvent
+	EndIf
+EndEvent
 
 event OnOptionDefault(int option)
-if(thePage==1)
-	if(option==NPCpredPos)
+If (thePage==1)
+	If (Option == NPCpredPos)
 		NPCpredGlobal.setValue(1)
 		NPCpred=NPCpredGlobal.getValueInt()
 		setMenuOptionValue(option, NPCpredList[NPCpred])
-	elseif(option==fatePos)
+	ElseIf (Option == fatePos)
 		fateGlobal.setValue(1)
 		fate=fateGlobal.getValueInt()
 		setMenuOptionValue(option, fateList[fate])
-	elseif(option==skillPos)
+	ElseIf (Option == skillPos)
 		skillGlobal.setValue(4)
 		skill=skillGlobal.getValueInt()
 		setMenuOptionValue(option, notList[skill])
-	elseif(option==essentialPos)
+	ElseIf (Option == essentialPos)
 		essentialGlobal.setValue(0)
 		essential=essentialGlobal.getValueInt() as Bool
 		setToggleOptionValue(essentialPos, essential)
-	endif
-elseif(thePage==2)
-	if(option==dTimePos)
+	EndIf
+ElseIf (thePage==2)
+	If (Option == dTimePos)
 		dTimeGlobal.setValue(1)
 		dTime=dTimeGlobal.getValue()
 		setSliderOptionValue(option, dTime, "{1}x")
-	elseif(option==dMinPos)
+	ElseIf (Option == dMinPos)
 		dMinGlobal.setValue(250)
 		dMin=dMinGlobal.getValueInt()
 		setSliderOptionValue(option, dMin, "{0} seconds")
-	elseif(option==sMinPos)
+	ElseIf (Option == sMinPos)
 		sMinGlobal.setValue(5)
 		sMin=sMinGlobal.getValueInt()
 		setSliderOptionValue(option, sMin, "{0} percent")
-	elseif(option==NPCbonusPos)
+	ElseIf (Option == NPCbonusPos)
 		NPCbonusGlobal.setValue(1)
 		NPCbonus=NPCbonusGlobal.getValue()
 		setSliderOptionValue(option, NPCbonus, "{1}x")
-	elseif(option==weightPos)
+	ElseIf (Option == weightPos)
 		weightGlobal.setValue(2)
 		weight=weightGlobal.getValueInt()
 		setSliderOptionValue(option, weight, "{0} percent")
-	endif
-endif
-endEvent
+	ElseIf (Option == damagemodPos)
+		damagemod.setValue(1)
+		damagemodf=damagemod.getValue()
+		setSliderOptionValue(option,damagemodf, "{1}x")
+	EndIf
+EndIf
+EndEvent
 
 event OnOptionHighlight(int option)
-if(thePage==1)
-	if(option==NPCpredPos)
+If (thePage==1)
+	If (Option == NPCpredPos)
 		SetInfoText("Choose whether only the player, all female NPCs, or only the player and female followers can swallow")
-	elseif(option==fatePos)
+	ElseIf (Option == fatePos)
 		SetInfoText("If absorption is chosen, the prey's items will be added to the predator's inventory")
-	elseif(option==skillPos)
+	ElseIf (Option == skillPos)
 		SetInfoText("If a character had a skill higher than yours, digesting them will add one point to that skill")
-	elseif(option==essentialPos)
+	ElseIf (Option == essentialPos)
 		SetInfoText("This can easily break quests; use at your own risk!")
-	elseif(option==newPlayerPos)
+	ElseIf (Option == newPlayerPos)
 		SetInfoText("Continue playing as the character who digested you, inheriting her skills and other stats.\nPerks are cleared and converted to perk points. Currently this only works for female characters.")
-	elseif(option==raceMenuPos)
+	ElseIf (Option == raceMenuPos)
 		SetInfoText("Disable minor character customization window after character switch. Can prevent crashes.")
-	endif
-elseif(thePage==2)
-	if(option==dTimePos)
+	ElseIf (Option == DebugJB)
+		SetInfoText("This will enable or disable debugging. The messages will be posted on your Papyrus logging, AND on your console in real time. If you have any questions or have errors, please grab a copy of your papyrus log, and find SCHAKEN at HTTPS://SCHAKEN-MODSCHAT.COM")
+	EndIf
+ElseIf (thePage==2)
+	If (Option == dTimePos)
 		SetInfoText("Digestion damage will be adjusted inversely for balance reasons")
-	elseif(option==dMinPos)
+	ElseIf (Option == dMinPos)
 		SetInfoText("Dead characters will take this long to digest. This occurs 50x as quickly in combat, or when Rapid Digestion is cast.")
-	elseif(option==sMinPos)
+	ElseIf (Option == sMinPos)
 		SetInfoText("All predators have at least this chance of swallowing anyone")
-	elseif(option==NPCbonusPos)
+	ElseIf (Option == NPCbonusPos)
 		SetInfoText("NPCs' swallow chances are multiplied by this value. This applies to followers as well.")
-	elseif(option==weightPos)
+	ElseIf (Option == weightPos)
 		SetInfoText("When someone digests a character, her weight slider will increase by this amount.")
-	endif
-elseif(thePage==3)
-	if(option==V1Pos)
+	ElseIf (Option == damagemodPos)
+		SetInfoText("The stomach acid damage is multiplied by this value.")
+	EndIf
+ElseIf (thePage==3)
+	If (Option == V1Pos)
 		SetInfoText("Swallow bonus improves by 20%")
-	elseif(option==V2Pos)
+	ElseIf (Option == V2Pos)
 		SetInfoText("Swallow bonus improves by 40% (Minimum skill 20)")
-	elseif(option==V3Pos)
+	ElseIf (Option == V3Pos)
 		SetInfoText("Swallow bonus improves by 60% (Minimum skill 40)")
-	elseif(option==V4Pos)
+	ElseIf (Option == V4Pos)
 		SetInfoText("Swallow bonus improves by 80% (Minimum skill 60)")
-	elseif(option==V5Pos)
+	ElseIf (Option == V5Pos)
 		SetInfoText("Swallow bonus is doubled (Minimum skill 80)")
-	elseif(option==IS1Pos)
+	ElseIf (Option == IS1Pos)
 		SetInfoText("Hold prey in your stomach 50% longer (Minimum skill 25)")
-	elseif(option==IS2Pos)
+	ElseIf (Option == IS2Pos)
 		SetInfoText("Hold prey in your stomach 100% longer (Minimum skill 50)")
-	elseif(option==IS3Pos)
+	ElseIf (Option == IS3Pos)
 		SetInfoText("Hold prey in your stomach 150% longer (Minimum skill 75)")
-	elseif(option==SA1Pos)
+	ElseIf (Option == SA1Pos)
 		SetInfoText("Your stomach deals 50% more damage per second (Minimum skill 30)")
-	elseif(option==SA2Pos)
+	ElseIf (Option == SA2Pos)
 		SetInfoText("Your stomach deals 100% more damage per second (Minimum skill 60)")
-	elseif(option==SA3Pos)
+	ElseIf (Option == SA3Pos)
 		SetInfoText("Your stomach deals 150% more damage per second (Minimum skill 90)")
-	elseif(option==N1Pos)
+	ElseIf (Option == N1Pos)
 		SetInfoText("Recover twice as much health and stamina while digesting prey (Minimum skill 35)")
-	elseif(option==N2Pos)
+	ElseIf (Option == N2Pos)
 		SetInfoText("Recover magicka while digesting prey (Minimum skill 45)")
-	elseif(option==CEpos)
+	ElseIf (Option == CEpos)
 		SetInfoText("Gain twice the permanent health/magicka/stamina bonuses by digesting prey (Minimum skill 60)")
-	elseif(option==SSPos)
+	ElseIf (Option == SSPos)
 		SetInfoText("Swallowing someone does not break stealth (Minimum skill 30)")
-	elseif(option==SBpos)
-		SetInfoText("You are not slowed when someone is in your stomach (Minimum skill 70)")
-	elseif(option==SFpos)
+	ElseIf (Option == CGpos)
+		SetInfoText("You Constrict prey while swallowing them, preventing any retaliation(Minimum skill 90)")
+	ElseIf (Option == RDpos)
+		SetInfoText("Your stomach binds the bones of digested prey, raising the dead(Minimum skill 90)")
+	ElseIf (Option == SFpos)
 		SetInfoText("Trap the souls of digested prey in your stomach (Minimum skill 100)")
-	endif
-endif
-endEvent
-GlobalVariable Property version  Auto  
-
-GlobalVariable Property NewPlayerGlobal  Auto  
+	EndIf
+ElseIf (thePage==4)
+	If (Option == SD1Pos)
+		SetInfoText("Struggling Damage improves by 20%")
+	ElseIf (Option == SD2Pos)
+		SetInfoText("Struggling Damage improves by 40% (Minimum skill 20)")
+	ElseIf (Option == SD3Pos)
+		SetInfoText("Struggling Damage improves by 60% (Minimum skill 40)")
+	ElseIf (Option == SD4Pos)
+		SetInfoText("Struggling Damage improves by 80% (Minimum skill 60)")
+	ElseIf (Option == Sd5Pos)
+		SetInfoText("Struggling Damage is doubled (Minimum skill 80)")
+		
+	ElseIf (Option == R1Pos)
+		SetInfoText("Acid Resistance improves by 10%")
+	ElseIf (Option == R2Pos)
+		SetInfoText("Acid Resistance improves by 20% (Minimum skill 20)")
+	ElseIf (Option == R3Pos)
+		SetInfoText("Acid Resistance improves by 30% (Minimum skill 40)")
+	ElseIf (Option == R4Pos)
+		SetInfoText("Acid Resistance improves by 40% (Minimum skill 60)")
+	ElseIf (Option == R5Pos)
+		SetInfoText("Acid Resistance improves by 50% (Minimum skill 80)")
+		
+	ElseIf (Option == S1Pos)
+		SetInfoText("Swallow Resistance improves by 10%")
+	ElseIf (Option == S2Pos)
+		SetInfoText("Swallow Resistance improves by 20% (Minimum skill 20)")
+	ElseIf (Option == S3Pos)
+		SetInfoText("Swallow Resistance improves by 30% (Minimum skill 40)")
+	ElseIf (Option == S4Pos)
+		SetInfoText("Swallow Resistance improves by 40% (Minimum skill 60)")
+	ElseIf (Option == S5Pos)
+		SetInfoText("Swallow Resistance improves by 50% (Minimum skill 80)")
+		
+	ElseIf (Option == PGPos)
+		SetInfoText("Deal Massive Damage to pred when escaping (Minimum skill 50)")
+	ElseIf (Option == DEPos)
+		SetInfoText("Recover Health While in friendly Stomachs(Minimum skill 25)")
+	ElseIf (Option == CEPos)
+		SetInfoText("Being in a friendly stomach adds the well rested effect(Minimum skill 25)")
+	EndIf
+	
+ElseIf (thePage==5)
+If (Option == playercentricpos)
+   SetInfoText("The player needs to be involved in every swallow attempt either as prey or predator")
+ElseIf (Option == unwillingaudiopos)
+   SetInfoText("When humanoid prey is swallowed unwilling struggling audio is played")
+ElseIf (Option == ScatMoanspos)
+   SetInfoText("Humanoids will make gender specific sounds during scat")
+ElseIf (Option == Morphonlypos)
+   SetInfoText("Humanoids will always try to use morphs instead of the normal belly. Regardless if the morphvore keyword is present or not")
+ElseIf (Option == strippos)
+   SetInfoText("The player is stripped of gear when swallowed")
+ElseIf (Option == noescapepos)
+   SetInfoText("Swallowed prey cannot escape their predators stomach unless the struggle mechanic is used")
+EndIf
+EndIf
+EndEvent

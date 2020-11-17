@@ -1,24 +1,36 @@
-Scriptname AddDevourmentScript extends activemagiceffect  
+;/ Decompiled by Champollion V1.0.1
+Source   : AddDevourmentScript.psc
+Modified : 2019-01-06 20:54:39
+Compiled : 2019-01-06 20:54:40
+User     : Rickard
+Computer : GAMEMEISTER
+/;
+scriptName adddevourmentscript extends activemagiceffect
 
-Event OnEffectStart(Actor akTarget, Actor akCaster)
-	if((akTarget.hasKeyword(NPC)&&akTarget.GetLeveledActorBase().GetSex()==1)||(!akTarget.hasKeyword(NPC)&&Manager.isModPredatorRace(akTarget.getLeveledActorBase().getRace())))
-		if(akTarget!=Game.GetPlayer())
-			DevourmentNPC.cast(akTarget)
-			; Debug.MessageBox(akTarget.getLeveledActorBase().getRace())
-			;if(akTarget.hasMagicEffect(DevourmentNPCEffect))
-			;	Debug.MessageBox(akTarget)
-			;	Debug.MessageBox("Success")
-			;endif
-		endif
-	endif
-EndEvent
+;-- Properties --------------------------------------
+keyword property NPC auto
+spell property TheAddSpell auto
+devourmentregistryscript property Manager auto
+spell property Devourment auto
+spell property Options auto
+magiceffect property DevourmentNPCEffect auto
+spell property Endo auto
+spell property DevourmentNPC auto
+shout property DevourmentShoutNPC auto
 
-Spell Property TheAddSpell Auto
-Spell Property DevourmentNPC Auto
-MagicEffect Property DevourmentNPCEffect Auto
-Spell Property Devourment Auto
-Spell Property Endo Auto
-Spell Property Options Auto
-Shout Property DevourmentShoutNPC Auto
-Keyword Property NPC Auto
-DevourmentRegistryScript Property Manager Auto
+;-- Variables ---------------------------------------
+
+;-- Functions ---------------------------------------
+
+function OnEffectStart(Actor akTarget, Actor akCaster)
+
+	if akTarget.hasKeyword(NPC) && (akTarget.GetLeveledActorBase().GetSex() == 1 || akTarget.GetLeveledActorBase().GetSex() == 0) || !akTarget.hasKeyword(NPC) && Manager.isModPredatorRace(akTarget.GetLeveledActorBase().getRace())
+		if akTarget != game.GetPlayer()
+			DevourmentNPC.Cast(akTarget as objectreference, none)
+		endIf
+	endIf
+endFunction
+
+; Skipped compiler generated GetState
+
+; Skipped compiler generated GotoState

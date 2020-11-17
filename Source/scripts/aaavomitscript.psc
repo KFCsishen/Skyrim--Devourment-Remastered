@@ -1,73 +1,81 @@
-Scriptname aaaVomitScript extends ObjectReference  
+;/ Decompiled by Champollion V1.0.1
+Source   : aaaVomitScript.psc
+Modified : 2014-11-12 02:39:26
+Compiled : 2014-11-12 02:39:28
+User     : Kent
+Computer : KENT-PC
+/;
+scriptName aaaVomitScript extends ObjectReference
 
-DevourmentRegistryScript Property manager Auto
+;-- Properties --------------------------------------
+container property VomitPile auto
+spell property DontSwallowMe auto
+Bool property Scent = false auto
+globalvariable property PreyHP auto
+globalvariable property Shititems auto
+explosion property theExplosion auto
+idle property ResetIdle auto
+spell property ScentSpell auto
+devourmentregistryscript property manager auto
+spell property NotThere auto
+globalvariable property pukeEnable auto
+effectshader property NoPlayerShader auto
+Bool property digested auto
+spell property PlayerIsPreySpell auto
 
-; ReferenceAlias Property theVictim  Auto  
+;-- Variables ---------------------------------------
 
-Explosion Property theExplosion  Auto  
+;-- Functions ---------------------------------------
 
-Event OnInit()
-	Actor victim=manager.getVomitPrey()
-	manager.unregisterVomit()
-if(!digested)
-	victim.moveTo(Self)
-	victim.setPosition(Self.GetPositionX(),Self.getPositionY(),Self.getPositionZ()+42)
-		victim.setScale(1)
-		victim.removeSpell(NotThere)
-		victim.setAlpha(100)
-		victim.setGhost(false)
-	if(victim!=Game.GetPlayer())
-		victim.enable(0)
-		; if(PreyHP.getValue()>0)
-		;	victim.damageAV("Health",victim.getAV("Health")-PreyHP.getValue())
-		; else
-		;	victim.damageAV("Health",-1+victim.getAV("Health"))
-		; endif
-		victim.stopCombat()
-	else
-		; NoPlayerShader.stop(victim)
-		; victim.setUnconscious(false)
-		victim.setPlayerControls(true)
-		victim.enableAI(true)
-		Game.setCameraTarget(victim)
-		; victim.dispelSpell(PlayerIsPreySpell)
-		;pushActorAway(victim,0)
-		; Game.ForceFirstPerson()
-		Game.EnablePlayerControls()
-		DontSwallowMe.cast(Game.getPlayer(),Game.getPlayer())
-	endif
-	victim.playIdle(resetIdle)
-	ObjectReference boom=placeAtMe(theExplosion)
-	; boom.setAngle(0,0,0)
-	; boom.setscale(0.5)
+; Skipped compiler generated GetState
 
-	;/if(victim.getAV("Health")<victim.getLevel())
-		victim.restoreAV("Health",victim.getLevel()-victim.getAV("Health"))
-	endif/;
-	
-	if(scent)
-		ScentSpell.cast(victim)
-	endif
-else
-	ObjectReference thePile=placeatme(VomitPile)
-	thePile.setAngle(0,0,0)
-	Victim.removeAllItems(thePile,false,true)
-endif
-	disable()
-	delete()
-endEvent
+function OnInit()
 
-GlobalVariable Property PreyHP  Auto
-GlobalVariable Property pukeEnable Auto
-EffectShader Property NoPlayerShader Auto
-Spell Property PlayerIsPreySpell Auto
-Idle Property ResetIdle Auto
-SPELL Property DontSwallowMe  Auto  
+    actor victim = manager.getVomitPrey()
+    manager.unregisterVomit()
+    if !digested
+        victim.moveTo(self as ObjectReference, 0.000000, 0.000000, 0.000000, true)
+        victim.setPosition(self.GetPositionX(), self.getPositionY(), self.getPositionZ() + 42 as Float)
+        victim.setScale(1 as Float)
+        victim.removeSpell(NotThere)
+        victim.setAlpha(100 as Float, false)
+        victim.setGhost(false)
+        if victim != game.GetPlayer()
+            victim.enable(0 as Bool)
+            victim.stopCombat()
+        else
+            victim.setPlayerControls(true)
+            victim.enableAI(true)
+            game.setCameraTarget(victim)
+            game.EnablePlayerControls(true, true, true, true, true, true, true, true, 0)
+            DontSwallowMe.Cast(game.GetPlayer() as ObjectReference, game.GetPlayer() as ObjectReference)
+        endIf
+        victim.playIdle(ResetIdle)
+        ObjectReference boom = self.placeAtMe(theExplosion as form, 1, false, false)
+        if Scent
+            ScentSpell.Cast(victim as ObjectReference, none)
+        endIf
+    else
+        ObjectReference thePile = self.placeAtMe(VomitPile as form, 1, false, false)
+        if(shititems.getvalue() == 1)
+        thePile.placeatme(victim.getwornform(0x00000001))
+        thePile.placeatme(victim.getwornform(0x00000004))
+        thePile.placeatme(victim.getwornform(0x00000008))
+        thePile.placeatme(victim.getwornform(0x00000010))
+        thePile.placeatme(victim.getwornform(0x00000080))
+        thePile.placeatme(victim.getwornform(0x00000200))             
+        victim.removeitem(victim.getwornform(0x00000001))
+        victim.removeitem(victim.getwornform(0x00000004))
+        victim.removeitem(victim.getwornform(0x00000008))
+        victim.removeitem(victim.getwornform(0x00000010))
+        victim.removeitem(victim.getwornform(0x00000080))
+        victim.removeitem(victim.getwornform(0x00000200))
+        endif
+        thePile.setAngle(0 as Float, 0 as Float, 0 as Float)
+        victim.removeAllItems(thePile, false, true)
+    endIf
+    self.disable(false)
+    self.delete()
+endFunction
 
-Bool Property digested  Auto  
-Container Property VomitPile Auto
-
-Spell Property NotThere Auto
-
-Bool Property Scent=false Auto
-Spell Property ScentSpell Auto
+; Skipped compiler generated GotoState
