@@ -3,6 +3,8 @@ Scriptname DevourmentMenuQuestScript extends SKI_ConfigBase
 ; Debugging
 
 Int DebugJB
+Int MaleJB
+Int FemaleJB
 Int ToggleVal
 
 ; positions
@@ -198,6 +200,10 @@ GlobalVariable Property _WomenEaten Auto
 GlobalVariable Property _MenEaten Auto
 GlobalVariable Property _bellyscale Auto
 GlobalVariable Property prevDov Auto
+GlobalVariable Property FemaleEnabled  Auto  
+{To enable Females for Devourment}
+GlobalVariable Property MaleEnabled  Auto  
+{To enable Males for Devourment}
 
 ; arrays
 
@@ -367,8 +373,12 @@ event OnPageReset(string page)
 		essentialPos	= AddToggleOption("Digest essential characters",essential)
 		newPlayerPos	= AddToggleOption("Continue playing after digestion?",newPlayer)
 		raceMenuPos		= AddToggleOption("Disable racemenu upon character switch?",disableRace)
+			ToggleVal 	= MaleEnabled.GetValue() as Int
+		MaleJB			= AddToggleOption("Enable Males:", ToggleVal)		
 			ToggleVal 	= Debugger.GetValue() as Int
 		DebugJB			= AddToggleOption("Enable Debugging:", ToggleVal)
+			ToggleVal 	= FemaleEnabled.GetValue() as Int
+		FemaleJB		= AddToggleOption("Enable Females:", ToggleVal)
 		thePage=1
 		
 	ElseIf (page=="Tweaks")
@@ -717,6 +727,22 @@ If (thePage==1)
 		Else
 			SetToggleOptionValue(DebugJB, False)
 			Debugger.SetValue(0)
+		EndIf
+	ElseIf (Option == MaleJB)
+		If MaleEnabled.GetValue() == 0
+			SetToggleOptionValue(MaleJB, True)
+			MaleEnabled.SetValue(1)
+		Else
+			SetToggleOptionValue(MaleJB, False)
+			MaleEnabled.SetValue(0)
+		EndIf
+	ElseIf (Option == FemaleJB)
+		If FemaleEnabled.GetValue() == 0
+			SetToggleOptionValue(FemaleJB, True)
+			FemaleEnabled.SetValue(1)
+		Else
+			SetToggleOptionValue(FemaleJB, False)
+			FemaleEnabled.SetValue(0)
 		EndIf
 	EndIf
 ElseIf (thePage==5)
@@ -1186,6 +1212,10 @@ If (thePage==1)
 		SetInfoText("Disable minor character customization window after character switch. Can prevent crashes.")
 	ElseIf (Option == DebugJB)
 		SetInfoText("This will enable or disable debugging. The messages will be posted on your Papyrus logging, AND on your console in real time. If you have any questions or have errors, please grab a copy of your papyrus log, and find SCHAKEN at HTTPS://SCHAKEN-MODSCHAT.COM")
+	ElseIf (Option == MaleJB)
+		SetInfoText("Toggles the ability for males to be used in this mod.")
+	ElseIf (Option == FemaleJB)
+		SetInfoText("Toggles the ability for females to be used in this mod.")
 	EndIf
 ElseIf (thePage==2)
 	If (Option == dTimePos)

@@ -2,87 +2,87 @@ scriptName devourmentregistryscript extends Quest conditional
 
 ;-- Properties --------------------------------------
 
-;_wetcoldbreathaction Property Breathe Auto
+;_wetcoldbreathaction Property Breathe Auto <--- WHY was this here????
 Int digestionMultiplier
 
-GlobalVariable			Property _WerewolfEaten		 Auto
-GlobalVariable			Property _VampireEaten Auto
-GlobalVariable			Property _DogEaten Auto
-GlobalVariable			Property _WomenEaten Auto
-GlobalVariable			Property EatDunmer Auto
+GlobalVariable			Property _WerewolfEaten			Auto
+GlobalVariable			Property _VampireEaten 			Auto
+GlobalVariable			Property _DogEaten 				Auto
+GlobalVariable			Property _WomenEaten			Auto
+GlobalVariable			Property EatDunmer				Auto
 GlobalVariable			Property cockvore				Auto
-GlobalVariable			Property _DwarvenMachineEaten Auto
-GlobalVariable			Property _FalmerEaten Auto
-GlobalVariable			Property _DeerEaten Auto
-GlobalVariable			Property _MudcrabEaten Auto
-GlobalVariable			Property _ScaleBelly Auto
-GlobalVariable			Property _BearEaten Auto
-GlobalVariable			Property _TrollEaten Auto
-GlobalVariable			Property _DremoraEaten Auto
-GlobalVariable			Property _FoxEaten Auto
-GlobalVariable			Property TimeScale Auto
-GlobalVariable			Property DTime Auto
-GlobalVariable			Property facialanim Auto
-GlobalVariable			Property _HorseEaten Auto
-GlobalVariable			Property _DragonPriestEaten Auto
-GlobalVariable			Property _SpiderEaten Auto
-GlobalVariable			Property _ChaurusEaten Auto
-GlobalVariable			Property PrevPerkPoints Auto
-GlobalVariable			Property EatKhajiit Auto
-GlobalVariable			Property HungerPoints Auto
-GlobalVariable			Property EatRedguard Auto
-GlobalVariable			Property PerkPoints Auto
-GlobalVariable			Property _SabrecatEaten Auto
-GlobalVariable			Property struggletoggle Auto
-GlobalVariable			Property UnwillingAudio Auto
-GlobalVariable			Property MorphOnly Auto
-GlobalVariable			Property _GiantEaten Auto
-GlobalVariable			Property _HagravenEaten Auto
-GlobalVariable			Property _ChickenEaten Auto
-GlobalVariable			Property _DragonEaten Auto
-GlobalVariable			Property _HorkerEaten Auto
-GlobalVariable			Property _HareEaten Auto
-GlobalVariable			Property _GoatEaten Auto
-GlobalVariable			Property SkillGain Auto
-GlobalVariable			Property _FishEaten Auto
-GlobalVariable			Property NoEscape Auto
-GlobalVariable			Property _WolfEaten Auto
-GlobalVariable			Property ReadyToVomit Auto
-GlobalVariable			Property NewPlayerGlobal Auto
-GlobalVariable			Property EatBreton Auto
-GlobalVariable			Property WeightGlobal Auto
-GlobalVariable			Property AnimBelly Auto
-GlobalVariable			Property _MenEaten Auto
-GlobalVariable			Property preysize Auto
-GlobalVariable			Property _noreturn Auto
-GlobalVariable			Property _MammothEaten Auto
-GlobalVariable			Property _CowEaten Auto
-GlobalVariable			Property _DraugrEaten Auto
-GlobalVariable			Property KillEssential Auto
-GlobalVariable			Property EatBosmer Auto
-GlobalVariable			Property acidamagemodifier Auto
-GlobalVariable			Property breastvore Auto
-GlobalVariable			Property strip Auto
-GlobalVariable			Property DeadDigestionTime Auto
-GlobalVariable			Property VictimsToPerk Auto
-GlobalVariable			Property ScatGlobal Auto
-GlobalVariable			Property ScatMoans Auto
-GlobalVariable			Property EatArgonian Auto
-GlobalVariable			Property Shititems Auto
-GlobalVariable			Property EatOrsimer Auto
-GlobalVariable			Property EatImperial Auto
-GlobalVariable			Property EatAltmer Auto
-GlobalVariable			Property EatNord Auto
+GlobalVariable			Property _DwarvenMachineEaten 	Auto
+GlobalVariable			Property _FalmerEaten 			Auto
+GlobalVariable			Property _DeerEaten 			Auto
+GlobalVariable			Property _MudcrabEaten 			Auto
+GlobalVariable			Property _ScaleBelly 			Auto
+GlobalVariable			Property _BearEaten 			Auto
+GlobalVariable			Property _TrollEaten 			Auto
+GlobalVariable			Property _DremoraEaten 			Auto
+GlobalVariable			Property _FoxEaten 				Auto
+GlobalVariable			Property TimeScale 				Auto
+GlobalVariable			Property DTime 					Auto
+GlobalVariable			Property facialanim 			Auto
+GlobalVariable			Property _HorseEaten 			Auto
+GlobalVariable			Property _DragonPriestEaten 	Auto
+GlobalVariable			Property _SpiderEaten 			Auto
+GlobalVariable			Property _ChaurusEaten 			Auto
+GlobalVariable			Property PrevPerkPoints 		Auto
+GlobalVariable			Property EatKhajiit 			Auto
+GlobalVariable			Property HungerPoints 			Auto
+GlobalVariable			Property EatRedguard 			Auto
+GlobalVariable			Property PerkPoints 			Auto
+GlobalVariable			Property _SabrecatEaten 		Auto
+GlobalVariable			Property struggletoggle 		Auto
+GlobalVariable			Property UnwillingAudio 		Auto
+GlobalVariable			Property MorphOnly 				Auto
+GlobalVariable			Property _GiantEaten 			Auto
+GlobalVariable			Property _HagravenEaten 		Auto
+GlobalVariable			Property _ChickenEaten 			Auto
+GlobalVariable			Property _DragonEaten 			Auto
+GlobalVariable			Property _HorkerEaten 			Auto
+GlobalVariable			Property _HareEaten 			Auto
+GlobalVariable			Property _GoatEaten 			Auto
+GlobalVariable			Property SkillGain 				Auto
+GlobalVariable			Property _FishEaten 			Auto
+GlobalVariable			Property NoEscape 				Auto
+GlobalVariable			Property _WolfEaten 			Auto
+GlobalVariable			Property ReadyToVomit 			Auto
+GlobalVariable			Property NewPlayerGlobal 		Auto
+GlobalVariable			Property EatBreton 				Auto
+GlobalVariable			Property WeightGlobal 			Auto
+GlobalVariable			Property AnimBelly 				Auto
+GlobalVariable			Property _MenEaten 				Auto
+GlobalVariable			Property preysize 				Auto
+GlobalVariable			Property _noreturn 				Auto
+GlobalVariable			Property _MammothEaten 			Auto
+GlobalVariable			Property _CowEaten 				Auto
+GlobalVariable			Property _DraugrEaten 			Auto
+GlobalVariable			Property KillEssential 			Auto
+GlobalVariable			Property EatBosmer 				Auto
+GlobalVariable			Property acidamagemodifier 		Auto
+GlobalVariable			Property breastvore 			Auto
+GlobalVariable			Property strip 					Auto
+GlobalVariable			Property DeadDigestionTime 		Auto
+GlobalVariable			Property VictimsToPerk 			Auto
+GlobalVariable			Property ScatGlobal 			Auto
+GlobalVariable			Property ScatMoans 				Auto
+GlobalVariable			Property EatArgonian 			Auto
+GlobalVariable			Property Shititems 				Auto
+GlobalVariable			Property EatOrsimer 			Auto
+GlobalVariable			Property EatImperial 			Auto
+GlobalVariable			Property EatAltmer 				Auto
+GlobalVariable			Property EatNord 				Auto
 
-Race					Property Red Auto
-Race					Property _Sabrecat Auto
-Race					Property RedV Auto
-Race					Property Arg Auto
-Race					Property BreV Auto
-Race					Property Kha Auto
-Race					Property Alt Auto
-Race					Property _SpiderLarge Auto
-Race					Property _Werewolf Auto
+Race					Property Red 					Auto
+Race					Property _Sabrecat 				Auto
+Race					Property RedV 					Auto
+Race					Property Arg 					Auto
+Race					Property BreV 					Auto
+Race					Property Kha 					Auto
+Race					Property Alt 					Auto
+Race					Property _SpiderLarge 			Auto
+Race					Property _Werewolf 				Auto
 Race					Property _DwarvenSphere Auto
 Race					Property _SpiderGiant Auto
 Race					Property _DraugrMagic Auto
@@ -225,32 +225,33 @@ message property UnclogMessage Auto
 message property PlayerDigestMessage Auto
 message property PerkMessage Auto
 
+
+perk property Nourish Auto
+perk property NourishMagic Auto
+perk property ConsumeEssence Auto
+perk property SoulFood Auto
+perk property Acid60 Auto
 VisualEffect Property Breath Auto
 activator property VomitActivator Auto
 armor property FullnessMPrey Auto
 Bool property lethal Auto conditional
 Bool property activatedDialog Auto conditional
-sound property BurpSound Auto
 wordofpower property VomitWord Auto
 bool isburping
 bool weightbool = True
-perk property Nourish Auto
-perk property NourishMagic Auto
-perk property ConsumeEssence Auto
-sound property ScatSound Auto
 topic property Scream Auto
 keyword property Surrender Auto
 miscobject property Ipecac Auto
 container property PoopDragon Auto
 sound property StomachSound Auto
 sound property BoneSound Auto
+sound property FFSound Auto
+sound property BurpSound Auto
+sound property ScatSound Auto
 int stomach
 faction property Follower Auto
 keyword property _Vampire Auto
-sound property FFSound Auto
 objectreference property HerStomach Auto
-perk property SoulFood Auto
-perk property Acid60 Auto
 devourmentnamescript property NameQuest Auto
 referencealias property DialogPreyAlias Auto
 explosion property BoneExplosion Auto
@@ -343,7 +344,6 @@ int Property kSlotMask33 = 0x00000008 AutoReadOnly ; Hands
 int Property kSlotMask37 = 0x00000080 AutoReadOnly ; Feet
 
 actor actingprey
-
 PlayerVampireQuestScript Property PlayerVampireQuest	Auto	
 
 int tick = 0
@@ -373,49 +373,49 @@ actor forceprey
 
 ;-- Variables ---------------------------------------
 
-Actor[] vomitPredArray
-Int instanceMM
-Int[] tummyMaximumTimers
 Float S1 = 2.70000
 Bool[] digestionSurrender
-Int numHandlers
-Int[] vomitFlagsArray
 Idle[] modPredatorIdles
 Race[] modPredators
-Armor[] modPredatorBellies
-Int numTummies
-Int vomitFailsafeTimer
-Float B1 = 0.22
 Bool scalebool
 DevourmentEventHandler[] handlers
-Int[] digestionFlags
-Int[] vomitTypeArray
-Int playerDigestionReminder
-Int instanceFF
-Actor[] tummyPredArray
-Int instanceFM
-Float N1 = 0.700000
-Float lastTimeProcessed
-Int numModPredators
-Int numBlocks
-Actor[] blockArray
-Int[] tummyTimers
 Actor[] tummyPreyArray
-Int numVomits
-Int numDigestions
-Float[] digestionDamage
 Actor[] preyArray
 Actor[] predArray
 Actor[] vomitPreyArray
-Float[] digestionTimers
-Int instanceMF
+Actor[] blockArray
+Actor[] tummyPredArray
+Actor[] vomitPredArray
+Armor[] modPredatorBellies
+Int[] tummyTimers
+Int[] digestionFlags
+Int[] vomitTypeArray
 Int[] tummyFlags
+Int[] vomitFlagsArray
+Int[] tummyMaximumTimers
+Int numVomits
+Int numDigestions
+Int numTummies
+Int instanceMM
+Int vomitFailsafeTimer
+Int numHandlers
+Int instanceMF
+Int numModPredators
+Int numBlocks
+Int playerDigestionReminder
+Int instanceFF
+Int instanceFM
+Float[] digestionDamage
+Float[] digestionTimers
+Float B1 = 0.22
+Float N1 = 0.700000
+Float lastTimeProcessed
 ;-- Functions ---------------------------------------
 
 ; Skipped compiler generated GotoState
 function RegisterDigestion(actor pred, actor prey, Int flags)
 
-	
+	NameQuest.Debugger(Pred.GetDisplayName()+" is Pred; "+Prey.GetDisplayName()+" is Prey", "DevourmentRegistryScript")
 		pred.modav("variable09",1)
 		if (pred.getav("variable09") <= 0)
 			pred.modav("variable09",(pred.getav("variable09")*-1) + 1)
@@ -725,7 +725,7 @@ function RegisterDigestion(actor pred, actor prey, Int flags)
 endFunction
 
 function RemoveGhost(actor prey)
-
+    NameQuest.Debugger(Prey.GetDisplayName()+" is prey in REMOVEGHOST", "DevourmentRegisteryScript")
 	if prey != game.getPlayer()&&prey != None
 		prey.moveTo(HerStomach)
 		prey.removeSpell(NotThere)
@@ -735,7 +735,7 @@ function RemoveGhost(actor prey)
 endFunction
 
 Bool function switchLethal(actor prey)
-
+    NameQuest.Debugger(Prey.GetDisplayName()+" is prey in SwitchLethal", "DevourmentRegisteryScript")
 	Int index = preyArray.find(prey, 0)
 	actor pred = predArray[index]
 	if index > -1
@@ -803,7 +803,7 @@ Bool function hasLivePrey(actor pred)
 endFunction
 
 Bool function sendDialogEvent(Float customID)
-
+    NameQuest.Debugger(CustomID+" is CUSTOMID in SendDialogueEvent", "DevourmentRegisteryScript")
 	Int index = preyArray.find(DialogPreyAlias.getActorRef(), 0)
 	if index > -1
 		Self.SendDevourmentEvent(9, predArray[index], preyArray[index], digestionFlags[index], customID, False)
@@ -813,7 +813,6 @@ Bool function sendDialogEvent(Float customID)
 endFunction
 
 Float function getDigestionTime(actor pred)
-
 	Float maxTime = 0 as Float
 	Float PredSkill = 0 as Float
 	if pred == game.getPlayer()
@@ -843,11 +842,12 @@ Float function getDigestionTime(actor pred)
 		maxTime = 10 as Float
 	endIf
 	maxTime *= DTime.getvalue()
-	return maxTime
+    return maxTime
+    NameQuest.Debugger(MaxTime+" is Digestion Time", "DevourmentRegisteryScript")
 endFunction
 
 function ExpelRemains(Int index)
-
+    NameQuest.Debugger(Index+" is Expelled in ExpelRemains", "DevourmentRegisteryScript")
 	actor pred = tummyPredArray[index]
 	actor prey = tummyPreyArray[index]
 	Bool NotOverYet = False
@@ -1213,7 +1213,7 @@ function UnregisterVomit()
 endFunction
 
 function ZeroPointSevenUpdate()
-	
+	NameQuest.Debugger(" 0.7 update function", "DevourmentRegisteryScript")
 	digestionFlags = new Int[128]
 	handlers = new DevourmentEventHandler[128]
 	numHandlers = 0
@@ -1228,12 +1228,12 @@ endFunction
 
 Bool function isInitialized()
 
-	return modPredators.length == 128
+    return modPredators.length == 128
+    NameQuest.Debugger("INITIALIZED", "DevourmentRegisteryScript")
 endFunction
 
 Int function addIngestionMethod(idle swallowAnim)
-
-	; Empty function
+	NameQuest.Debugger("AddIngestionMethod() this is empty??", "DevourmentRegistryScript")
 endFunction
 
 armor function getModPredatorBelly(race predRace)
@@ -1246,6 +1246,7 @@ armor function getModPredatorBelly(race predRace)
 endFunction
 
 function DoDialog(actor pred, actor prey, Int flags)
+    NameQuest.Debugger(Prey.GetDisplayName()+" is prey in doDialogue", "DevourmentRegisteryScript")
     Actor Player = Game.GetPlayer()
     ObjectReference PredO = Pred as ObjectReference
     ObjectReference PreyO = Prey as ObjectReference
@@ -1351,7 +1352,7 @@ Bool function isModPredatorRace(race predRace)
 endFunction
 
 function SendDevourmentEvent(Int eventType, actor pred, actor prey, Int flags, Float fraction, Bool oral)
-
+	NameQuest.Debugger("EventType: "+EventType+"; Pred: "+Pred.GetDisplayName()+"; Prey: "+Prey.GetDisplayName(), "DevourmentRegistryScript")
 	Int index = 0
 	while index < numHandlers
 		if eventType == 1
@@ -1387,6 +1388,7 @@ function addPredatorRace(race predRace, idle swallowAnim, armor belly)
 		numModPredators += 1
 	else
 		debug.messageBox("Error: 128 predator races are already registered! I am genuinely impressed.")
+		NameQuest.Debugger("Error: 128 predator races are already registered! I am genuinely impressed.", "DevourmentRegistryScript")
 	endIf
 endFunction
 
@@ -1518,6 +1520,7 @@ actor function whoAte(actor prey)
 	endWhile
 	return none
 endFunction
+
 Float function getStrugglingDamage(actor pred,actor prey)
 	Float strugglingdamage = 10 as Float 
 	if game.getplayer().hasPerk(SD80)
@@ -1531,9 +1534,9 @@ Float function getStrugglingDamage(actor pred,actor prey)
 	elseIf game.getplayer().hasPerk(SD00)
 		strugglingdamage *= 1.2
 	endIf
-	
 	return strugglingdamage	 
 EndFunction
+
 int function getAcidResistance(actor pred,actor prey)
 int acidresistance = 0
 if(game.getplayer().hasperk(R00))
@@ -1551,7 +1554,6 @@ return acidresistance
 EndFunction
 
 Float function getDigestionDamage(actor pred, actor prey)
-
 	Float damage = 0 as Float
 	Float PredSkill = 0 as Float
 	if pred == game.getPlayer()
@@ -1585,17 +1587,14 @@ Float function getDigestionDamage(actor pred, actor prey)
 endFunction
 
 Actor[] function getDeadPreyArray()
-
 	return tummyPreyArray
 endFunction
 
 Actor[] function getDeadPredArray()
-
 	return tummyPredArray
 endFunction
 
 Function scaleNodes(Actor prey,Actor pred, float totalTime, float currentTime, float startTime, float endTime, float BA, float BB, float SA, float SB, float NA, float NB)
-	
 	float scaleTime=(currentTime-(totalTime*endTime))/((startTime-endTime)*totalTime)
 	float scaleB=scaleTime*(BA-BB)+(BB)
 	float scaleS=scaleTime*(SA-SB)+SB
@@ -1617,24 +1616,14 @@ Function scaleNodes(Actor prey,Actor pred, float totalTime, float currentTime, f
 	Else
 			netimmerse.setNodeScale(pred as objectreference, nodescale, scaleb, False)
 	endif
-		
- 
-	
-	
-
-		
-
- 
 NiOverride.UpdateModelWeight(pred)	
 EndFunction
 
 Float[] function getDigestionTimeArray()
-
 	return digestionTimers
 endFunction
 
 function UnregisterDigestion(Int index, Bool dead)
-
 	if index < 0
 		return 
 	endIf
@@ -1658,7 +1647,6 @@ function UnregisterDigestion(Int index, Bool dead)
 endFunction
 
 function AccelerateDigestion(actor pred, Int ticks)
-
 	Int index = 0
 	while index < numDigestions
 		if predArray[index] == pred
@@ -1669,7 +1657,6 @@ function AccelerateDigestion(actor pred, Int ticks)
 endFunction
 
 function disableEscape(actor prey)
-
 	Int index = 0
 	while index < numDigestions
 		if preyArray[index] == prey
@@ -1681,7 +1668,6 @@ function disableEscape(actor prey)
 endFunction
 
 Int function getNumEaten(actor pred, Int flags)
-
 	Int index = 0
 	Int numEaten = 0
 	while index < numDigestions
